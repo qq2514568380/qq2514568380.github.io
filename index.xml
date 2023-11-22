@@ -1,15 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>我的全新 Hugo 网站</title>
+        <title>森的博客</title>
         <link>https://qq2514568380.github.io/</link>
-        <description>这是我的全新 Hugo 网站</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</lastBuildDate>
+        <description>欢迎来到森的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</lastBuildDate>
             <atom:link href="https://qq2514568380.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>First_post</title>
     <link>https://qq2514568380.github.io/first_post/</link>
     <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
-    <author>xxxx</author>
+    <author>李森</author>
     <guid>https://qq2514568380.github.io/first_post/</guid>
     <description><![CDATA[1231231 Lighthouse (image)]]></description>
 </item>
