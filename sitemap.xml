@@ -2,8 +2,11 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>https://qq2514568380.github.io/categories/</loc><lastmod>2023-11-21T11:21:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://qq2514568380.github.io/first_post/</loc><lastmod>2023-11-21T11:21:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://qq2514568380.github.io/posts/</loc><lastmod>2023-11-21T11:21:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://qq2514568380.github.io/tags/</loc><lastmod>2023-11-21T11:21:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://qq2514568380.github.io/</loc><lastmod>2023-11-21T11:21:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://qq2514568380.github.io/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://qq2514568380.github.io/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
+            <loc>https://qq2514568380.github.io/tags/%E7%AC%AC%E4%B8%80/</loc><lastmod>2023-11-21T11:21:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://qq2514568380.github.io/categories/%E7%AC%AC%E4%B8%801/</loc><lastmod>2023-11-21T11:21:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://qq2514568380.github.io/tags/%E7%AC%AC%E4%BA%8C/</loc><lastmod>2023-11-21T11:21:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url></urlset>
