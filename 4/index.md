@@ -1,7 +1,7 @@
 # SpringBoot集成flyway
 
 
-{{< music auto="https://music.163.com/#/song?id=2030754234"  autoplay="true">}}
+{{< music auto="https://music.163.com/#/song?id=2030754234"  autoplay="true" fixed="true">}}
 
 ### SpringBoot集成flyway
 

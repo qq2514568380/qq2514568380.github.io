@@ -1,7 +1,7 @@
 # IDEA远程调试docker容器
 
 
-{{< music auto="https://music.163.com/#/song?id=2030754234"  autoplay="true">}}
+{{< music auto="https://music.163.com/#/song?id=2030754234"  autoplay="true" fixed="true">}}
 
 ## 远程 Debug 配置
 
