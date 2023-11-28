@@ -6,33 +6,33 @@
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
             <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>IDEA远程调试docker容器</title>
-    <link>https://qq2514568380.github.io/first_post/</link>
+    <link>https://qq2514568380.github.io/1/</link>
     <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
     <author>李森</author>
-    <guid>https://qq2514568380.github.io/first_post/</guid>
+    <guid>https://qq2514568380.github.io/1/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
             </div>远程 Debug 配置 IDEA中添加Remote JVM Debug配置项，拷贝以下配置 1 -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 容器启动配置 dockerfile配置 1 2 3 4 5 FROM openjdk:8 ADD ./myapp.jar ./ EXPOSE 8082 EXPOSE 5005 ENTRYPOINT [&#34;java&#34;,&#34;-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005&#34;,&#34;-jar&#34;,&#34;myapp.jar&#34;,&#34;--spring.profiles.active=prod&#34;]]]></description>
 </item>
 <item>
-    <title>测试文章2</title>
-    <link>https://qq2514568380.github.io/first_post2/</link>
+    <title>React钩子</title>
+    <link>https://qq2514568380.github.io/3/</link>
     <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
     <author>李森</author>
-    <guid>https://qq2514568380.github.io/first_post2/</guid>
+    <guid>https://qq2514568380.github.io/3/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
-            </div>功能测试文章 Lighthouse (image) 1 2 3 images: [] tags: [] categories: [] 1 2 featuredImage: &#34;&#34; featuredImagePreview: &#34;&#34; tags: 文章的标签. categories: 文章所属的类别. 1 lightgallery: true $$ c = \pm\sqrt{a^2 + b^2} $$ \[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \] \begin{equation*} \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f} \end{equation*} \begin{equation}]]></description>
+            </div>平常函数式组件用的多一点,React Hooks 是 React 团队在两年前的 16.8 版本推出的一套全新的机制,它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。 几个]]></description>
 </item>
 <item>
-    <title>测试文章3</title>
-    <link>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-5/</link>
+    <title>SpringBoot集成flyway</title>
+    <link>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-4-%E5%89%AF%E6%9C%AC/</link>
     <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
     <author>李森</author>
-    <guid>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-5/</guid>
+    <guid>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-4-%E5%89%AF%E6%9C%AC/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
-            </div>功能测试文章 Lighthouse (image) 1 2 3 images: [] tags: [] categories: [] 1 2 featuredImage: &#34;&#34; featuredImagePreview: &#34;&#34; tags: 文章的标签. categories: 文章所属的类别. 1 lightgallery: true $$ c = \pm\sqrt{a^2 + b^2} $$ \[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \] \begin{equation*} \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f} \end{equation*} \begin{equation}]]></description>
+            </div>SpringBoot集成flyway 在 pom.xml 加入如下依赖 1 2 3 4 5 6 7 8 &lt;dependency&gt; &lt;groupId&gt;org.flywaydb&lt;/groupId&gt; &lt;artifactId&gt;flyway-core&lt;/artifactId&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.flywaydb&lt;/groupId&gt; &lt;artifactId&gt;flyway-mysql&lt;/artifactId&gt; &lt;/dependency&gt; 在application.yml中加入配置 1 2 3 4 5 6 7]]></description>
 </item>
 <item>
     <title>测试文章4</title>
@@ -43,6 +43,56 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
             </div>功能测试文章 Lighthouse (image) 1 2 3 images: [] tags: [] categories: [] 1 2 featuredImage: &#34;&#34; featuredImagePreview: &#34;&#34; tags: 文章的标签. categories: 文章所属的类别. 1 lightgallery: true $$ c = \pm\sqrt{a^2 + b^2} $$ \[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \] \begin{equation*} \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f} \end{equation*} \begin{equation}]]></description>
+</item>
+<item>
+    <title>测试文章4</title>
+    <link>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-5-%E5%89%AF%E6%9C%AC/</link>
+    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-5-%E5%89%AF%E6%9C%AC/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>功能测试文章 Lighthouse (image) 1 2 3 images: [] tags: [] categories: [] 1 2 featuredImage: &#34;&#34; featuredImagePreview: &#34;&#34; tags: 文章的标签. categories: 文章所属的类别. 1 lightgallery: true $$ c = \pm\sqrt{a^2 + b^2} $$ \[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \] \begin{equation*} \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f} \end{equation*} \begin{equation}]]></description>
+</item>
+<item>
+    <title>测试文章4</title>
+    <link>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-6-%E5%89%AF%E6%9C%AC/</link>
+    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-6-%E5%89%AF%E6%9C%AC/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>功能测试文章 Lighthouse (image) 1 2 3 images: [] tags: [] categories: [] 1 2 featuredImage: &#34;&#34; featuredImagePreview: &#34;&#34; tags: 文章的标签. categories: 文章所属的类别. 1 lightgallery: true $$ c = \pm\sqrt{a^2 + b^2} $$ \[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \] \begin{equation*} \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f} \end{equation*} \begin{equation}]]></description>
+</item>
+<item>
+    <title>测试文章4</title>
+    <link>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-7-%E5%89%AF%E6%9C%AC/</link>
+    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-7-%E5%89%AF%E6%9C%AC/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>功能测试文章 Lighthouse (image) 1 2 3 images: [] tags: [] categories: [] 1 2 featuredImage: &#34;&#34; featuredImagePreview: &#34;&#34; tags: 文章的标签. categories: 文章所属的类别. 1 lightgallery: true $$ c = \pm\sqrt{a^2 + b^2} $$ \[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \] \begin{equation*} \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f} \end{equation*} \begin{equation}]]></description>
+</item>
+<item>
+    <title>测试文章4</title>
+    <link>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-8-%E5%89%AF%E6%9C%AC/</link>
+    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-8-%E5%89%AF%E6%9C%AC/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>功能测试文章 Lighthouse (image) 1 2 3 images: [] tags: [] categories: [] 1 2 featuredImage: &#34;&#34; featuredImagePreview: &#34;&#34; tags: 文章的标签. categories: 文章所属的类别. 1 lightgallery: true $$ c = \pm\sqrt{a^2 + b^2} $$ \[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \] \begin{equation*} \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f} \end{equation*} \begin{equation}]]></description>
+</item>
+<item>
+    <title>线程同步...</title>
+    <link>https://qq2514568380.github.io/2/</link>
+    <pubDate>Mon, 20 Nov 2023 11:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/2/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>线程同步可以说在日常开发中是用的很多， 但对于其内部如何实现的，一般人可能知道的并不多。介绍linux中的锁实现futex的优点及原理，最后分]]></description>
 </item>
 </channel>
 </rss>

@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>React钩子 - 森的博客</title><meta name="Description" content="欢迎来到森的博客"><meta property="og:title" content="React钩子" />
+<meta property="og:description" content="平常函数式组件用的多一点,React Hooks 是 React 团队在两年前的 16.8 版本推出的一套全新的机制,它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。 几个" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://qq2514568380.github.io/3/" /><meta property="og:image" content="https://qq2514568380.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-11-21T11:21:26+08:00" />
+<meta property="article:modified_time" content="2023-11-21T11:21:26+08:00" /><meta property="og:site_name" content="我的网站" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://qq2514568380.github.io/logo.png"/>
+
+<meta name="twitter:title" content="React钩子"/>
+<meta name="twitter:description" content="平常函数式组件用的多一点,React Hooks 是 React 团队在两年前的 16.8 版本推出的一套全新的机制,它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。 几个"/>
+<meta name="application-name" content="我的网站">
+<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://qq2514568380.github.io/3/" /><link rel="prev" href="https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-4-%E5%89%AF%E6%9C%AC/" /><link rel="next" href="https://qq2514568380.github.io/1/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "React钩子",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/qq2514568380.github.io\/3\/"
+        },"genre": "posts","keywords": "react, 钩子函数","wordcount":  3962 ,
+        "url": "https:\/\/qq2514568380.github.io\/3\/","datePublished": "2023-11-21T11:21:26+08:00","dateModified": "2023-11-21T11:21:26+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "李森"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="森的博客">森的博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="森的博客">森的博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">React钩子</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>李森</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>技术</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-11-21">2023-11-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;3962 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;8 minutes&nbsp;<span id="/3/" class="leancloud_visitors" data-flag-title="React钩子">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
+                    </span>&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/lighthouse.jpg"
+        data-srcset="/images/lighthouse.jpg, /images/lighthouse.jpg 1.5x, /images/lighthouse.jpg 2x"
+        data-sizes="auto"
+        alt="/images/lighthouse.jpg"
+        title="/images/lighthouse.jpg" width="1972" height="1315" /></div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#几个内置hooks的作用以及使用">几个内置Hooks的作用以及使用</a>
+      <ul>
+        <li><a href="#usestate-让函数组件具有维持状态的能力">useState ：让函数组件具有维持状态的能力</a></li>
+        <li><a href="#缺点"><strong>缺点：</strong></a></li>
+        <li><a href="#什么是副作用">什么是副作用？</a></li>
+        <li><a href="#小结用法">小结用法:</a></li>
+        <li><a href="#为什么要使用usecallback">为什么要使用useCallback?</a></li>
+        <li><a href="#避免重复计算">避免重复计算</a></li>
+        <li><a href="#小结一下">小结一下：</a></li>
+        <li><a href="#useref-的重要的功能">useRef 的重要的功能</a></li>
+        <li><a href="#usecontext定义全局状态">useContext：定义全局状态</a></li>
+        <li><a href="#为什么要使用-usecontext">为什么要使用 useContext？</a></li>
+        <li><a href="#具体原理">具体原理：</a></li>
+        <li><a href="#使用这儿用了官方例子">使用：（这儿用了官方例子）</a></li>
+        <li><a href="#优点">优点：</a></li>
+        <li><a href="#缺点-1">缺点：</a></li>
+        <li><a href="#最后">最后</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><meting-js auto="https://music.163.com/#/playlist?id=60198" theme="#448aff"></meting-js>
+<p>平常函数式组件用的多一点,React Hooks 是 React 团队在两年前的 16.8 版本推出的一套全新的机制,它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。</p>
+<h2 id="几个内置hooks的作用以及使用">几个内置Hooks的作用以及使用</h2>
+<h3 id="usestate-让函数组件具有维持状态的能力">useState ：让函数组件具有维持状态的能力</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span><span class="p">[</span><span class="nx">count</span><span class="p">,</span> <span class="nx">setCount</span><span class="p">]</span><span class="o">=</span><span class="nx">useState</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>优点：</strong></p>
+<p><strong>让函数组件具有维持状态的能力</strong>，即：在一个函数组件的多次渲染之间，这个 state 是<strong>共享</strong>的。便于维护状态。</p>
+<h3 id="缺点"><strong>缺点：</strong></h3>
+<p><strong>一旦组件有自己状态，意味着组件如果重新创建，就需要有恢复状态的过程，这通常会让组件变得更复杂。</strong></p>
+<p><strong>用法：</strong></p>
+<ol>
+<li>useState(initialState) 的参数 initialState 是创建 state 的初始值。</li>
+</ol>
+<blockquote>
+<p>它可以是任意类型，比如数字、对象、数组等等。</p>
+</blockquote>
+<ol>
+<li>useState() 的返回值是一个有着两个元素的数组。第一个数组元素用来读取 state 的值，第二个则是用来设置这个 state 的值。</li>
+</ol>
+<blockquote>
+<p>在这里要注意的是，state 的变量（例子中的 count）是只读的，所以我们必须通过第二个数组元素 setCount 来设置它的值。</p>
+</blockquote>
+<ol>
+<li>如果要创建多个  <strong>state</strong> ，那么我们就需要多次调用 useState。</li>
+</ol>
+<p><strong>什么样的值应该保存在 state 中？</strong></p>
+<p>通常来说，我们要遵循的一个原则就是：<strong>state 中不要保存可以通过计算得到的值</strong> 。</p>
+<ul>
+<li>从 props 传递过来的值。有时候 props 传递过来的值无法直接使用，而是要通过一定的计算后再在 UI 上展示，比如说排序。那么我们要做的就是每次用的时候，都重新排序一下，或者利用某些 cache 机制，而不是将结果直接放到 state 里。</li>
+<li>从 URL 中读到的值。比如有时需要读取 URL 中的参数，把它作为组件的一部分状态。那么我们可以在每次需要用的时候从 URL 中读取，而不是读出来直接放到 state 里。</li>
+<li>从 cookie、localStorage 中读取的值。通常来说，也是每次要用的时候直接去读取，而不是读出来后放到 state 里。</li>
+</ul>
+<p>useEffect：执行副作用</p>
+<blockquote>
+<p>useEffect(fn, deps);</p>
+</blockquote>
+<p>useEffect ，顾名思义，用于执行一段副作用。</p>
+<h3 id="什么是副作用">什么是副作用？</h3>
+<p>通常来说，副作用是指一段和当前执行结果无关的代码。比如说要修改函数外部的某个变量，要发起一个请求，等等。</p>
+<p>也就是说，在函数组件的当次执行过程中， <strong>useEffect</strong>  <strong>中代码的执行是不影响渲染出来的</strong>  <strong>UI</strong> 的。</p>
+<p>对应到 Class 组件，那么 useEffect 就涵盖了 ComponentDidMount、componentDidUpdate 和 componentWillUnmount 三个生命周期方法。不过如果你习惯了使用 Class 组件，那千万不要按照把 useEffect 对应到某个或者某几个生命周期的方法。你只要记住，useEffect 是每次组件 render 完后判断依赖并执行就可以了。</p>
+<p>useEffect 还有两个特殊的用法：没有依赖项，以及依赖项作为空数组。我们来具体分析下。</p>
+<ol>
+<li>没有依赖项，则每次 render 后都会重新执行。例如：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">javascript</span>
+</span></span><span class="line"><span class="cl"><span class="nx">复制代码useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 每次 render 完一定执行
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;渲染...........&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol>
+<li>空数组作为依赖项，则只在首次执行时触发，对应到 Class 组件就是 componentDidMount。例如：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nt">scss</span>
+</span></span><span class="line"><span class="cl"><span class="nt">复制代码useEffect</span><span class="o">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 组件首次渲染时执行，等价于 class 组件中的 componentDidMount
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nt">console</span><span class="nc">.log</span><span class="o">(</span><span class="s1">&#39;did mount........&#39;</span><span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="o">,</span> <span class="o">[])</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="小结用法">小结用法:</h3>
+<p>总结一下，useEffect 让我们能够在下面四种时机去执行一个回调函数产生副作用：</p>
+<ol>
+<li>每次 render 后执行：不提供第二个依赖项参数。</li>
+</ol>
+<blockquote>
+<p>比如useEffect(() =&gt; {})。</p>
+</blockquote>
+<ol>
+<li>仅第一次 render 后执行：提供一个空数组作为依赖项。</li>
+</ol>
+<blockquote>
+<p>比如useEffect(() =&gt; {}, [])。</p>
+</blockquote>
+<ol>
+<li>第一次以及依赖项发生变化后执行：提供依赖项数组。</li>
+</ol>
+<blockquote>
+<p>比如useEffect(() =&gt; {}, [deps])。</p>
+</blockquote>
+<ol>
+<li>组件 unmount 后执行：返回一个回调函数。</li>
+</ol>
+<blockquote>
+<p>比如useEffect() =&gt; { return () =&gt; {} }, [])。</p>
+</blockquote>
+<p>useCallback：缓存回调函数</p>
+<blockquote>
+<p>useCallback(fn, deps)</p>
+</blockquote>
+<h3 id="为什么要使用usecallback">为什么要使用useCallback?</h3>
+<p>在 React 函数组件中， <strong>每一次</strong>  <strong>UI</strong>  <strong>的变化，都是通过重新执行整个函数来完成的</strong> ，这和传统的 Class 组件有很大区别：函数组件中并没有一个直接的方式在多次渲染之间维持一个状态。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">javascript</span>
+</span></span><span class="line"><span class="cl"><span class="nx">复制代码function</span> <span class="nx">Counter</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">count</span><span class="p">,</span> <span class="nx">setCount</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">handleIncrement</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">setCount</span><span class="p">(</span><span class="nx">count</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">handleIncrement</span><span class="p">}</span><span class="o">&gt;+&lt;</span><span class="err">/button&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>思考下这个过程。 <strong>每次组件状态发生变化的时候，函数组件实际上都会重新执行一遍</strong> 。在每次执行的时候，实际上都会创建一个新的事件处理函数  <strong>handleIncrement</strong> 。</p>
+<p>这也意味着，即使 count 没有发生变化，但是函数组件因为其它状态发生变化而重新渲染时（函数组件重新被执行），这种写法也会每次创建一个新的函数。创建一个新的事件处理函数，虽然不影响结果的正确性，但其实是没必要的。因为这样做不仅增加了系统的开销，更重要的是： <strong>每次创建新函数的方式会让接收事件处理函数的组件，需要重新渲染</strong> 。</p>
+<p>比如这个例子中的 button 组件，接收了 handleIncrement ，并作为一个属性。如果每次都是一个新的，那么这个 React 就会认为这个组件的 props 发生了变化，从而必须重新渲染。因此，我们需要做到的是： <strong>只有当</strong>  <strong>count</strong>  <strong>发生变化时，我们才需要重新定一个回调函数</strong> 。而这正是 useCallback 这个 Hook 的作用。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">javascript</span>
+</span></span><span class="line"><span class="cl"><span class="nx">复制代码import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span><span class="p">,</span> <span class="nx">useCallback</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">Counter</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">count</span><span class="p">,</span> <span class="nx">setCount</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">handleIncrement</span> <span class="o">=</span> <span class="nx">useCallback</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">setCount</span><span class="p">(</span><span class="nx">count</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nx">count</span><span class="p">],</span> <span class="c1">// 只有当 count 发生变化时，才会重新创建回调函数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">handleIncrement</span><span class="p">}</span><span class="o">&gt;+&lt;</span><span class="err">/button&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>useMemo：缓存计算的结果</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">js</span>
+</span></span><span class="line"><span class="cl"><span class="nx">复制代码useMemo</span><span class="p">(</span><span class="nx">fn</span><span class="p">,</span> <span class="nx">deps</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>useCallback(fn, deps) 相当于 useMemo(() =&gt; fn, deps)。</p>
+</blockquote>
+<p>这里的 fn 是产生所需数据的一个 <strong>计算函数</strong> 。通常来说， <strong>fn</strong>  <strong>会使用</strong>  <strong>deps</strong>  <strong>中声明的一些变量来生成一个结果，用来渲染出最终的</strong>  <strong>UI</strong> 。</p>
+<p>这个场景应该很容易理解：如果某个 <strong>数据</strong> 是通过其它数据计算得到的，那么只有当用到的数据，也就是依赖的数据发生变化的时候，才应该需要重新计算。</p>
+<h3 id="避免重复计算">避免重复计算</h3>
+<blockquote>
+<p>通过  <strong>useMemo</strong>  这个 Hook，可以避免在用到的数据没发生变化时进行的重复计算。虽然例子展示的是一个很简单的场景，但如果是一个复杂的计算，那么对于 <strong>提升性能</strong> 会有很大的帮助。</p>
+</blockquote>
+<p>举个例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">css</span>
+</span></span><span class="line"><span class="cl"><span class="nt">复制代码const</span> <span class="nt">calc</span> <span class="o">=</span> <span class="o">(</span><span class="nt">a</span><span class="o">,</span> <span class="nt">b</span><span class="o">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="err">//</span> <span class="err">假设这里做了复杂的计算，暂时用次幂模拟</span>
+</span></span><span class="line"><span class="cl">    <span class="err">return</span> <span class="err">a</span> <span class="err">**</span> <span class="err">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nt">const</span> <span class="nt">MyComponent</span> <span class="o">=</span> <span class="o">(</span><span class="nt">props</span><span class="o">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="err">const</span> <span class="err">{a,</span> <span class="err">b</span><span class="p">}</span> <span class="o">=</span> <span class="nt">props</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">const</span> <span class="nt">c</span> <span class="o">=</span> <span class="nt">calc</span><span class="o">(</span><span class="nt">a</span><span class="o">,</span> <span class="nt">b</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">return</span> <span class="o">&lt;</span><span class="nt">div</span><span class="o">&gt;</span><span class="nt">c</span><span class="o">:</span> <span class="p">{</span><span class="err">c</span><span class="p">}</span><span class="o">&lt;/</span><span class="nt">div</span><span class="o">&gt;;</span>
+</span></span><span class="line"><span class="cl"><span class="err">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果 calc 计算耗时 1000ms，那么每次渲染都要等待这么久，怎么优化呢？</p>
+<blockquote>
+<p>a, b 值不变的情况下，得出的 c 定是相同的。</p>
+</blockquote>
+<p>所以我们可以用 useMemo 把值给缓存起来，避免重复计算相同的结果。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">javascript</span>
+</span></span><span class="line"><span class="cl"><span class="nx">复制代码const</span> <span class="nx">calc</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 假设这里做了复杂的计算，暂时用次幂模拟
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">return</span> <span class="nx">a</span> <span class="o">**</span> <span class="nx">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">MyComponent</span> <span class="o">=</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="p">{</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">}</span> <span class="o">=</span> <span class="nx">props</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 缓存
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">useMemo</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">calc</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">),</span> <span class="p">[</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">c</span><span class="o">:</span> <span class="p">{</span><span class="nx">c</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/div&gt;;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>useCallback 的功能其实是可以用 useMemo 来实现的:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">javascript</span>
+</span></span><span class="line"><span class="cl"><span class="nx">复制代码</span> <span class="kr">const</span> <span class="nx">myEventHandler</span> <span class="o">=</span> <span class="nx">useMemo</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="c1">// 返回一个函数作为缓存结果
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="k">return</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// 在这里进行事件处理
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span> <span class="p">[</span><span class="nx">dep1</span><span class="p">,</span> <span class="nx">dep2</span><span class="p">]);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="小结一下">小结一下：</h3>
+<p><strong>感觉到这有这种感觉，其实 hook 就是建立了一个绑定某个结果到依赖数据的关系。只有当依赖变了，这个结果才需要被重新得到。</strong></p>
+<p>useRef：在多次渲染之间共享数据</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ini" data-lang="ini"><span class="line"><span class="cl"><span class="na">ini</span>
+</span></span><span class="line"><span class="cl"><span class="na">复制代码const myRefContainer</span> <span class="o">=</span><span class="s">useRef(initialValue);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>我们可以把  <strong>useRef</strong>  看作是在函数组件之外创建的一个容器空间。在这个容器上，我们可以通过唯一的 current 属设置一个值，从而在函数组件的多次渲染之间共享这个值。</p>
+<h3 id="useref-的重要的功能">useRef 的重要的功能</h3>
+<p><strong>1.</strong>  <strong>存储跨渲染的数据</strong></p>
+<p>使用  <strong>useRef</strong>  保存的数据一般是和 UI 的渲染无关的，因此当  <strong>ref</strong>  的值发生变化时，是不会触发组件的重新渲染的，这也是  <strong>useRef</strong>  区别于  <strong>useState</strong>  的地方。</p>
+<p>举例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nt">scss</span>
+</span></span><span class="line"><span class="cl"><span class="nt">复制代码</span> <span class="nt">const</span> <span class="o">[</span><span class="nt">time</span><span class="o">,</span> <span class="nt">setTime</span><span class="o">]</span> <span class="o">=</span> <span class="nt">useState</span><span class="o">(</span><span class="nt">0</span><span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="c1">// 定义 timer 这样一个容器用于在跨组件渲染之间保存一个变量 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="nt">const</span> <span class="nt">timer</span> <span class="o">=</span> <span class="nt">useRef</span><span class="o">(</span><span class="nt">null</span><span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nt">const</span> <span class="nt">handleStart</span> <span class="o">=</span> <span class="nt">useCallback</span><span class="o">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 使用 current 属性设置 ref 的值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nt">timer</span><span class="nc">.current</span> <span class="o">=</span> <span class="nt">window</span><span class="nc">.setInterval</span><span class="o">(()</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="nt">setTime</span><span class="o">((</span><span class="nt">time</span><span class="o">)</span> <span class="o">=&gt;</span> <span class="nt">time</span> <span class="o">+</span> <span class="nt">1</span><span class="o">)</span><span class="p">;</span> <span class="p">}</span><span class="o">,</span> <span class="nt">100</span><span class="o">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span><span class="o">,</span> <span class="o">[])</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>2.</strong>  <strong>保存某个</strong>  <strong>DOM</strong>  <strong>节点的引用</strong></p>
+<blockquote>
+<p>是在某些场景中，我们必须要获得真实 <strong>DOM</strong> 节点的引用，所以结合 React 的  <strong>ref</strong>  属性和  <strong>useRef</strong>  这个 Hook，我们就可以获得真实的 DOM 节点，并对这个节点进行操作。</p>
+</blockquote>
+<p>React 官方例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">javascript</span>
+</span></span><span class="line"><span class="cl"><span class="nx">复制代码function</span> <span class="nx">TextInputWithFocusButton</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">inputEl</span> <span class="o">=</span> <span class="nx">useRef</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">onButtonClick</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// current 属性指向了真实的 input 这个 DOM 节点，从而可以调用 focus 方法
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">inputEl</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">focus</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">inputEl</span><span class="p">}</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&#34;text&#34;</span> <span class="o">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">onButtonClick</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Focus</span> <span class="nx">the</span> <span class="nx">input</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="err">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>理解：</strong></p>
+<p>可以看到ref 这个属性提供了获得 DOM 节点的能力，并利用 useRef 保存了这个节点的应用。这样的话，一旦 input 节点被渲染到界面上，那我们通过 inputEl.current 就能访问到真实的 DOM 节点的实例了</p>
+<h3 id="usecontext定义全局状态">useContext：定义全局状态</h3>
+<h3 id="为什么要使用-usecontext">为什么要使用 useContext？</h3>
+<p>React 组件之间的状态传递只有一种方式，那就是通过 props。缺点： <strong>这种传递关系只能在父子组件之间进行。</strong></p>
+<p>那么问题出现：跨层次，或者同层的组件之间要如何进行数据的共享？这就涉及到一个新的命题： <strong>全局状态管理</strong> 。</p>
+<p>react提供的解决方案： <strong>Context</strong>  机制。</p>
+<h3 id="具体原理">具体原理：</h3>
+<p>React 提供了 Context 这样一个机制， <strong>能够让所有在某个组件开始的组件树上创建一个</strong>  <strong>Context</strong> 。这样这个组件树上的所有组件，就都能访问和修改这个 <strong>Context</strong> 了。</p>
+<p>那么在函数组件里，我们就可以使用 useContext 这样一个 Hook 来管理 Context。</p>
+<h3 id="使用这儿用了官方例子">使用：（这儿用了官方例子）</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">javascript</span>
+</span></span><span class="line"><span class="cl"><span class="nx">复制代码const</span> <span class="nx">themes</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">light</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">foreground</span><span class="o">:</span> <span class="s2">&#34;#000000&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">background</span><span class="o">:</span> <span class="s2">&#34;#eeeeee&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">dark</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">foreground</span><span class="o">:</span> <span class="s2">&#34;#ffffff&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">background</span><span class="o">:</span> <span class="s2">&#34;#222222&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 创建一个 Theme 的 Context
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">ThemeContext</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createContext</span><span class="p">(</span><span class="nx">themes</span><span class="p">.</span><span class="nx">light</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 整个应用使用 ThemeContext.Provider 作为根组件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 使用 themes.dark 作为当前 Context 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="o">&lt;</span><span class="nx">ThemeContext</span><span class="p">.</span><span class="nx">Provider</span> <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="nx">themes</span><span class="p">.</span><span class="nx">dark</span><span class="p">}</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="nx">Toolbar</span> <span class="o">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="err">/ThemeContext.Provider&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 在 Toolbar 组件中使用一个会使用 Theme 的 Button
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">Toolbar</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="nx">ThemedButton</span> <span class="o">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 在 Theme Button 中使用 useContext 来获取当前的主题
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">ThemedButton</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">theme</span> <span class="o">=</span> <span class="nx">useContext</span><span class="p">(</span><span class="nx">ThemeContext</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">style</span><span class="o">=</span><span class="p">{{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">background</span><span class="o">:</span> <span class="nx">theme</span><span class="p">.</span><span class="nx">background</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">color</span><span class="o">:</span> <span class="nx">theme</span><span class="p">.</span><span class="nx">foreground</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}}</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">I</span> <span class="nx">am</span> <span class="nx">styled</span> <span class="nx">by</span> <span class="nx">theme</span> <span class="nx">context</span><span class="o">!</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="err">/button&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="优点">优点：</h3>
+<p><strong>Context</strong>  提供了一个方便在多个组件之间共享数据的机制。</p>
+<h3 id="缺点-1">缺点：</h3>
+<p>Context 相当于提供了一个定义 React 世界中全局变量的机制，而全局变量则意味着两点：</p>
+<p><strong>1.</strong>  <strong>会让调试变得困难，因为你很难跟踪某个</strong>  <strong>Context</strong>  <strong>的变化究竟是如何产生的。</strong></p>
+<p><strong>2.</strong>  <strong>让组件的复用变得困难，因为一个组件如果使用了某个</strong>  <strong>Context</strong> ，它就必须确保被用到的地方一定有这个 <strong>Context</strong> 的 <strong>Provider</strong> 在其父组件的路径上。</p>
+<p><strong>实际应用场景</strong></p>
+<p>由于以上缺点，所以在 React 的开发中，除了像 Theme、Language 等一目了然的需要全局设置的变量外），我们很少会使用 Context 来做太多数据的共享。需要再三强调的是，Context 更多的是提供了一个强大的机制，让 React 应用具备定义全局的响应式数据的能力。</p>
+<blockquote>
+<p>此外，很多状态管理框架，比如 Redux，正是利用了 Context 的机制来提供一种更加可控的组件之间的状态管理机制。因此，理解 Context 的机制，也可以让我们更好地去理解 Redux 这样的框架实现的原理。</p>
+</blockquote>
+<h3 id="最后">最后</h3>
+<p>其实了解学会了useState 和 useEffect 这两个 核心 Hooks，基本能完成绝大多数 React 功能的开发了。</p>
+<p>useCallback、useMemo、useRef 和 useContext。这几个 Hook 都是为了解决函数组件中遇到的特定问题。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-11-21</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/3/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://qq2514568380.github.io/3/" data-title="React钩子" data-hashtags="react,钩子函数"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://qq2514568380.github.io/3/" data-hashtag="react"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://qq2514568380.github.io/3/" data-title="React钩子"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://qq2514568380.github.io/3/" data-title="React钩子"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://qq2514568380.github.io/3/" data-title="React钩子" data-image="/images/lighthouse.jpg"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/react/">react</a>,&nbsp;<a href="/tags/%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0/">钩子函数</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/first_post-%E5%89%AF%E6%9C%AC-4-%E5%89%AF%E6%9C%AC/" class="prev" rel="prev" title="SpringBoot集成flyway"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>SpringBoot集成flyway</a>
+            <a href="/1/" class="next" rel="next" title="IDEA远程调试docker容器">IDEA远程调试docker容器<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.120.4">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">李森</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/aplayer/APlayer.min.css"><link rel="stylesheet" href="/lib/aplayer/dark.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/aplayer/APlayer.min.js"></script><script type="text/javascript" src="/lib/meting/Meting.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{"gitalk":{"admin":[""],"clientID":"","clientSecret":"","id":"2023-11-21T11:21:26+08:00","owner":"","repo":"","title":"React钩子"},"valine":{"appId":"","appKey":"","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"en","pageSize":10,"placeholder":"Your comment ...","recordIP":true,"visitor":true}},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

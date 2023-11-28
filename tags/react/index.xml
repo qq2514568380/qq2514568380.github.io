@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>react - Tag - 森的博客</title>
+        <link>https://qq2514568380.github.io/tags/react/</link>
+        <description>react - Tag - 森的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/react/" rel="self" type="application/rss+xml" /><item>
+    <title>React钩子</title>
+    <link>https://qq2514568380.github.io/3/</link>
+    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/3/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>平常函数式组件用的多一点,React Hooks 是 React 团队在两年前的 16.8 版本推出的一套全新的机制,它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。 几个]]></description>
+</item>
+</channel>
+</rss>
