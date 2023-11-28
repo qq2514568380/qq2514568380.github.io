@@ -1,7 +1,7 @@
 # React钩子
 
 
-{{< music auto="https://music.163.com/#/playlist?id=60198" >}}
+{{< music auto="https://music.163.com/#/song?id=2030754234"  autoplay="true">}}
 
 平常函数式组件用的多一点,React Hooks 是 React 团队在两年前的 16.8 版本推出的一套全新的机制,它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。
 

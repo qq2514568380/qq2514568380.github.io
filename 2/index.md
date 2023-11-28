@@ -1,7 +1,7 @@
 # 线程同步...
 
 
-{{< music auto="https://music.163.com/#/playlist?id=60198" >}}
+{{< music auto="https://music.163.com/#/song?id=2030754234"  autoplay="true">}}
 
 线程同步可以说在日常开发中是用的很多，
 但对于其内部如何实现的，一般人可能知道的并不多。介绍linux中的锁实现futex的优点及原理，最后分析java中同步机制如wait/notify, synchronized, ReentrantLock。
