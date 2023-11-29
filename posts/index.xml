@@ -15,6 +15,26 @@
             </div>功能测试文章]]></description>
 </item>
 <item>
+    <title>docker-compose怎么来的</title>
+    <link>https://qq2514568380.github.io/6/</link>
+    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/6/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>转载自4'000 Stars and counting, a trip down memory lane 我很幸运能够在 2014 年成为第一批踏上 Docker 之旅的人之一，尝试将监控堆栈容器化。我在 2014 年初开始了解 Docker，并花了]]></description>
+</item>
+<item>
+    <title>docker-compose怎么来的</title>
+    <link>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-5-%E5%89%AF%E6%9C%AC/</link>
+    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-5-%E5%89%AF%E6%9C%AC/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>转载自4'000 Stars and counting, a trip down memory lane 我很幸运能够在 2014 年成为第一批踏上 Docker 之旅的人之一，尝试将监控堆栈容器化。我在 2014 年初开始了解 Docker，并花了]]></description>
+</item>
+<item>
     <title>IDEA远程调试docker容器</title>
     <link>https://qq2514568380.github.io/1/</link>
     <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
@@ -43,16 +63,6 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
             </div>SpringBoot集成flyway 在 pom.xml 加入如下依赖 1 2 3 4 5 6 7 8 &lt;dependency&gt; &lt;groupId&gt;org.flywaydb&lt;/groupId&gt; &lt;artifactId&gt;flyway-core&lt;/artifactId&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.flywaydb&lt;/groupId&gt; &lt;artifactId&gt;flyway-mysql&lt;/artifactId&gt; &lt;/dependency&gt; 在application.yml中加入配置 1 2 3 4 5 6 7]]></description>
-</item>
-<item>
-    <title>测试文章4</title>
-    <link>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-5-%E5%89%AF%E6%9C%AC/</link>
-    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
-    <author>李森</author>
-    <guid>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-5-%E5%89%AF%E6%9C%AC/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
-            </div>功能测试文章 Lighthouse (image) 1 2 3 images: [] tags: [] categories: [] 1 2 featuredImage: &#34;&#34; featuredImagePreview: &#34;&#34; tags: 文章的标签. categories: 文章所属的类别. 1 lightgallery: true $$ c = \pm\sqrt{a^2 + b^2} $$ \[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \] \begin{equation*} \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f} \end{equation*} \begin{equation}]]></description>
 </item>
 <item>
     <title>测试文章4</title>
