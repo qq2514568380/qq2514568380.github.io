@@ -15,9 +15,19 @@
             </div>远程 Debug 配置 IDEA中添加Remote JVM Debug配置项，拷贝以下配置 1 -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 容器启动配置 dockerfile配置 1 2 3 4 5 FROM openjdk:8 ADD ./myapp.jar ./ EXPOSE 8082 EXPOSE 5005 ENTRYPOINT [&#34;java&#34;,&#34;-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005&#34;,&#34;-jar&#34;,&#34;myapp.jar&#34;,&#34;--spring.profiles.active=prod&#34;]]]></description>
 </item>
 <item>
+    <title>线程同步...</title>
+    <link>https://qq2514568380.github.io/2/</link>
+    <pubDate>Mon, 20 Nov 2023 11:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/2/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>线程同步可以说在日常开发中是用的很多， 但对于其内部如何实现的，一般人可能知道的并不多。介绍linux中的锁实现futex的优点及原理，最后分]]></description>
+</item>
+<item>
     <title>React钩子</title>
     <link>https://qq2514568380.github.io/3/</link>
-    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
+    <pubDate>Sun, 19 Nov 2023 11:21:26 &#43;0800</pubDate>
     <author>李森</author>
     <guid>https://qq2514568380.github.io/3/</guid>
     <description><![CDATA[<div class="featured-image">
@@ -27,22 +37,12 @@
 <item>
     <title>SpringBoot集成flyway</title>
     <link>https://qq2514568380.github.io/4/</link>
-    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
+    <pubDate>Sat, 18 Nov 2023 11:21:26 &#43;0800</pubDate>
     <author>李森</author>
     <guid>https://qq2514568380.github.io/4/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
             </div>SpringBoot集成flyway 在 pom.xml 加入如下依赖 1 2 3 4 5 6 7 8 &lt;dependency&gt; &lt;groupId&gt;org.flywaydb&lt;/groupId&gt; &lt;artifactId&gt;flyway-core&lt;/artifactId&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.flywaydb&lt;/groupId&gt; &lt;artifactId&gt;flyway-mysql&lt;/artifactId&gt; &lt;/dependency&gt; 在application.yml中加入配置 1 2 3 4 5 6 7]]></description>
-</item>
-<item>
-    <title>线程同步...</title>
-    <link>https://qq2514568380.github.io/2/</link>
-    <pubDate>Mon, 20 Nov 2023 11:21:26 &#43;0800</pubDate>
-    <author>李森</author>
-    <guid>https://qq2514568380.github.io/2/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
-            </div>线程同步可以说在日常开发中是用的很多， 但对于其内部如何实现的，一般人可能知道的并不多。介绍linux中的锁实现futex的优点及原理，最后分]]></description>
 </item>
 </channel>
 </rss>
