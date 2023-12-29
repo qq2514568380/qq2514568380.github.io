@@ -7,14 +7,14 @@
             <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Wed, 29 Nov 2023 11:21:26 &#43;0800</lastBuildDate>
             <atom:link href="https://qq2514568380.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>杂拍</title>
+    <title>北京老街</title>
     <link>https://qq2514568380.github.io/8/</link>
     <pubDate>Wed, 29 Nov 2023 11:21:26 &#43;0800</pubDate>
     <author>李森</author>
     <guid>https://qq2514568380.github.io/8/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/images/7.jpg" referrerpolicy="no-referrer">
-            </div>杂拍]]></description>
+                <img src="/images/12.jpg" referrerpolicy="no-referrer">
+            </div>北京老街]]></description>
 </item>
 <item>
     <title>杂拍</title>
@@ -45,6 +45,16 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
             </div>远程 Debug 配置 IDEA中添加Remote JVM Debug配置项，拷贝以下配置 1 -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 容器启动配置 dockerfile配置 1 2 3 4 5 FROM openjdk:8 ADD ./myapp.jar ./ EXPOSE 8082 EXPOSE 5005 ENTRYPOINT [&#34;java&#34;,&#34;-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005&#34;,&#34;-jar&#34;,&#34;myapp.jar&#34;,&#34;--spring.profiles.active=prod&#34;]]]></description>
+</item>
+<item>
+    <title>北京温榆河</title>
+    <link>https://qq2514568380.github.io/9/</link>
+    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/9/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/7.jpg" referrerpolicy="no-referrer">
+            </div>北京温榆河]]></description>
 </item>
 <item>
     <title>幂等和非幂等</title>
@@ -82,16 +92,6 @@
     <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
     <author>李森</author>
     <guid>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-12-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
-            </div>功能测试文章 Lighthouse (image) 1 2 3 images: [] tags: [] categories: [] 1 2 featuredImage: &#34;&#34; featuredImagePreview: &#34;&#34; tags: 文章的标签. categories: 文章所属的类别. 1 lightgallery: true $$ c = \pm\sqrt{a^2 + b^2} $$ \[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \] \begin{equation*} \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f} \end{equation*} \begin{equation}]]></description>
-</item>
-<item>
-    <title>测试文章4</title>
-    <link>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-7-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC/</link>
-    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
-    <author>李森</author>
-    <guid>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-7-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
             </div>功能测试文章 Lighthouse (image) 1 2 3 images: [] tags: [] categories: [] 1 2 featuredImage: &#34;&#34; featuredImagePreview: &#34;&#34; tags: 文章的标签. categories: 文章所属的类别. 1 lightgallery: true $$ c = \pm\sqrt{a^2 + b^2} $$ \[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \] \begin{equation*} \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f} \end{equation*} \begin{equation}]]></description>

@@ -5,14 +5,14 @@
         <description>拍照 - Tag - 森的博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
             <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Wed, 29 Nov 2023 11:21:26 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/%E6%8B%8D%E7%85%A7/" rel="self" type="application/rss+xml" /><item>
-    <title>杂拍</title>
+    <title>北京老街</title>
     <link>https://qq2514568380.github.io/8/</link>
     <pubDate>Wed, 29 Nov 2023 11:21:26 &#43;0800</pubDate>
     <author>李森</author>
     <guid>https://qq2514568380.github.io/8/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="/images/7.jpg" referrerpolicy="no-referrer">
-            </div>杂拍]]></description>
+                <img src="/images/12.jpg" referrerpolicy="no-referrer">
+            </div>北京老街]]></description>
 </item>
 <item>
     <title>杂拍</title>
@@ -23,6 +23,16 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/1.jpg" referrerpolicy="no-referrer">
             </div>地铁站]]></description>
+</item>
+<item>
+    <title>北京温榆河</title>
+    <link>https://qq2514568380.github.io/9/</link>
+    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/9/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/7.jpg" referrerpolicy="no-referrer">
+            </div>北京温榆河]]></description>
 </item>
 </channel>
 </rss>
