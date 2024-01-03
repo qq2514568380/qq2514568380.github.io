@@ -4,7 +4,17 @@
         <link>https://qq2514568380.github.io/posts/</link>
         <description>All Posts | 森的博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
-            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Wed, 29 Nov 2023 11:21:26 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Wed, 20 Dec 2023 11:21:26 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>代码优化之去掉if else</title>
+    <link>https://qq2514568380.github.io/10/</link>
+    <pubDate>Wed, 20 Dec 2023 11:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/10/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/18.jpg" referrerpolicy="no-referrer">
+            </div>代码优化之去掉if else 方式一 - 工厂类 定义一个操作接口 1 2 3 public interface Operation { int apply(int a, int b); } 实现操作， 这里只以add为例 1 2 3 4 5 6 public class Addition implements Operation { @Override public int apply(int a, int]]></description>
+</item>
+<item>
     <title>北京老街</title>
     <link>https://qq2514568380.github.io/8/</link>
     <pubDate>Wed, 29 Nov 2023 11:21:26 &#43;0800</pubDate>
@@ -90,16 +100,6 @@
     <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
     <author>李森</author>
     <guid>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-12-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
-            </div>功能测试文章 Lighthouse (image) 1 2 3 images: [] tags: [] categories: [] 1 2 featuredImage: &#34;&#34; featuredImagePreview: &#34;&#34; tags: 文章的标签. categories: 文章所属的类别. 1 lightgallery: true $$ c = \pm\sqrt{a^2 + b^2} $$ \[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \] \begin{equation*} \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f} \end{equation*} \begin{equation}]]></description>
-</item>
-<item>
-    <title>测试文章4</title>
-    <link>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-7-%E5%89%AF%E6%9C%AC/</link>
-    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
-    <author>李森</author>
-    <guid>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-7-%E5%89%AF%E6%9C%AC/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
             </div>功能测试文章 Lighthouse (image) 1 2 3 images: [] tags: [] categories: [] 1 2 featuredImage: &#34;&#34; featuredImagePreview: &#34;&#34; tags: 文章的标签. categories: 文章所属的类别. 1 lightgallery: true $$ c = \pm\sqrt{a^2 + b^2} $$ \[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \] \begin{equation*} \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f} \end{equation*} \begin{equation}]]></description>

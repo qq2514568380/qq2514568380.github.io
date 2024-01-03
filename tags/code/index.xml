@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>code - Tag - 森的博客</title>
+        <link>https://qq2514568380.github.io/tags/code/</link>
+        <description>code - Tag - 森的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Wed, 20 Dec 2023 11:21:26 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/code/" rel="self" type="application/rss+xml" /><item>
+    <title>代码优化之去掉if else</title>
+    <link>https://qq2514568380.github.io/10/</link>
+    <pubDate>Wed, 20 Dec 2023 11:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/10/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/18.jpg" referrerpolicy="no-referrer">
+            </div>代码优化之去掉if else 方式一 - 工厂类 定义一个操作接口 1 2 3 public interface Operation { int apply(int a, int b); } 实现操作， 这里只以add为例 1 2 3 4 5 6 public class Addition implements Operation { @Override public int apply(int a, int]]></description>
+</item>
+</channel>
+</rss>
