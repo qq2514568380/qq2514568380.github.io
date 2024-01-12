@@ -19,7 +19,7 @@
 <meta name="application-name" content="我的网站">
 <meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://qq2514568380.github.io/10/" /><link rel="prev" href="https://qq2514568380.github.io/8/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://qq2514568380.github.io/10/" /><link rel="prev" href="https://qq2514568380.github.io/12/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -30,7 +30,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/qq2514568380.github.io\/10\/"
-        },"genre": "posts","keywords": "if, code","wordcount":  1912 ,
+        },"genre": "posts","keywords": "if, code","wordcount":  1854 ,
         "url": "https:\/\/qq2514568380.github.io\/10\/","datePublished": "2023-12-20T11:21:26+08:00","dateModified": "2023-12-20T11:21:26+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -104,7 +104,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">代码优化之去掉if else</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>李森</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>技术</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-12-20">2023-12-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1912 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-12-20">2023-12-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1854 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;<span id="/10/" class="leancloud_visitors" data-flag-title="代码优化之去掉if else">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
                     </span>&nbsp;</div>
@@ -226,8 +226,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p>对于上面为什么方法名是<code>apply</code>,<code>Optional</code>怎么用? 请参考这篇：</p>
-<ul>
+</div><ul>
 <li>Java 8 - 函数编程(lambda表达式)
 <ul>
 <li>Lambda 表达式的特点?</li>
@@ -326,16 +325,12 @@
 <ul>
 <li>首先让我们回顾下什么是命令模式
 <ul>
-<li>看这篇文章：<a href="" rel="">行为型 - 命令模式(Command)</a>
-<ul>
 <li>命令模式(Command pattern): 将&quot;请求&quot;封闭成对象, 以便使用不同的请求,队列或者日志来参数化其他对象. 命令模式也支持可撤销的操作。
 <ul>
 <li>Command: 命令</li>
 <li>Receiver: 命令接收者，也就是命令真正的执行者</li>
 <li>Invoker: 通过它来调用命令</li>
 <li>Client: 可以设置命令与命令的接收者</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -733,7 +728,7 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/8/" class="prev" rel="prev" title="北京老街"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>北京老街</a></div>
+    <div class="post-nav"><a href="/12/" class="prev" rel="prev" title="傍晚的什刹海"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>傍晚的什刹海</a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.

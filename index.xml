@@ -17,6 +17,16 @@
             </div>代码优化之去掉if else 方式一 - 工厂类 定义一个操作接口 1 2 3 public interface Operation { int apply(int a, int b); } 实现操作， 这里只以add为例 1 2 3 4 5 6 public class Addition implements Operation { @Override public int apply(int a, int]]></description>
 </item>
 <item>
+    <title>傍晚的什刹海</title>
+    <link>https://qq2514568380.github.io/12/</link>
+    <pubDate>Thu, 30 Nov 2023 18:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/12/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/21.jpg" referrerpolicy="no-referrer">
+            </div>功能测试文章]]></description>
+</item>
+<item>
     <title>北京老街</title>
     <link>https://qq2514568380.github.io/8/</link>
     <pubDate>Wed, 29 Nov 2023 11:21:26 &#43;0800</pubDate>
@@ -77,31 +87,21 @@
             </div>概念: ​ 在web中的:(下面描述讲解的是web) ​ 幂等: ​ 对于同一种行为，如果执行不论多少次，最终的结果都是一致相同的，就称这种行为是幂等的]]></description>
 </item>
 <item>
-    <title>测试文章4</title>
-    <link>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-10-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC/</link>
+    <title>自学响应式编程(一)</title>
+    <link>https://qq2514568380.github.io/11/</link>
     <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
     <author>李森</author>
-    <guid>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-10-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC/</guid>
+    <guid>https://qq2514568380.github.io/11/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
             </div>功能测试文章 Lighthouse (image) 1 2 3 images: [] tags: [] categories: [] 1 2 featuredImage: &#34;&#34; featuredImagePreview: &#34;&#34; tags: 文章的标签. categories: 文章所属的类别. 1 lightgallery: true $$ c = \pm\sqrt{a^2 + b^2} $$ \[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \] \begin{equation*} \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f} \end{equation*} \begin{equation}]]></description>
 </item>
 <item>
-    <title>测试文章4</title>
-    <link>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-11-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC/</link>
+    <title>自学响应式编程(一)</title>
+    <link>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-8-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC/</link>
     <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
     <author>李森</author>
-    <guid>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-11-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
-            </div>功能测试文章 Lighthouse (image) 1 2 3 images: [] tags: [] categories: [] 1 2 featuredImage: &#34;&#34; featuredImagePreview: &#34;&#34; tags: 文章的标签. categories: 文章所属的类别. 1 lightgallery: true $$ c = \pm\sqrt{a^2 + b^2} $$ \[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \] \begin{equation*} \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f} \end{equation*} \begin{equation}]]></description>
-</item>
-<item>
-    <title>测试文章4</title>
-    <link>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-12-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC/</link>
-    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
-    <author>李森</author>
-    <guid>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-12-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC/</guid>
+    <guid>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-8-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
             </div>功能测试文章 Lighthouse (image) 1 2 3 images: [] tags: [] categories: [] 1 2 featuredImage: &#34;&#34; featuredImagePreview: &#34;&#34; tags: 文章的标签. categories: 文章所属的类别. 1 lightgallery: true $$ c = \pm\sqrt{a^2 + b^2} $$ \[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \] \begin{equation*} \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f} \end{equation*} \begin{equation}]]></description>

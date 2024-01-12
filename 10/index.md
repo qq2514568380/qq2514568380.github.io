@@ -54,8 +54,6 @@ public int calculateUsingFactory(int a, int b, String operator) {
 }
 ```
 
-对于上面为什么方法名是`apply`,`Optional`怎么用? 请参考这篇：
-
 - Java 8 - 函数编程(lambda表达式)
   - Lambda 表达式的特点?
   - Lambda 表达式使用和Stream下的接口?
@@ -114,12 +112,11 @@ public void whenCalculateUsingEnumOperator_thenReturnCorrectResult() {
 > 命令模式也是非常常用的重构方式， 把每个操作符当作一个Command。
 
 - 首先让我们回顾下什么是命令模式
-  - 看这篇文章：[行为型 - 命令模式(Command)]()
-    - 命令模式(Command pattern): 将"请求"封闭成对象, 以便使用不同的请求,队列或者日志来参数化其他对象. 命令模式也支持可撤销的操作。 
-      - Command: 命令
-      - Receiver: 命令接收者，也就是命令真正的执行者
-      - Invoker: 通过它来调用命令
-      - Client: 可以设置命令与命令的接收者
+  - 命令模式(Command pattern): 将"请求"封闭成对象, 以便使用不同的请求,队列或者日志来参数化其他对象. 命令模式也支持可撤销的操作。 
+    - Command: 命令
+    - Receiver: 命令接收者，也就是命令真正的执行者
+    - Invoker: 通过它来调用命令
+    - Client: 可以设置命令与命令的接收者
 - Command接口
 
 ```java
