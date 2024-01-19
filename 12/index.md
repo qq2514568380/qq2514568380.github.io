@@ -15,4 +15,4 @@
 
 {{< image src="/images/25.jpg">}}
 
-
+{{< image src="/images/26.jpg">}}
