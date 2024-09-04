@@ -4,9 +4,29 @@
         <link>https://qq2514568380.github.io/</link>
         <description>欢迎来到森的博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
-            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Thu, 18 Jan 2024 18:21:26 &#43;0800</lastBuildDate>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Wed, 22 May 2024 11:21:26 &#43;0800</lastBuildDate>
             <atom:link href="https://qq2514568380.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>抽象工厂模式的具体实现</title>
+    <link>https://qq2514568380.github.io/17/</link>
+    <pubDate>Wed, 22 May 2024 11:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/17/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>1. 图形用户界面（GUI）组件 场景：创建不同操作系统的 GUI 组件，如按钮和文本框。 应用 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30]]></description>
+</item>
+<item>
+    <title>策略模式的具体实现</title>
+    <link>https://qq2514568380.github.io/16/</link>
+    <pubDate>Tue, 21 May 2024 11:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/16/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>设计模型具体实现 1. 支付方式选择 场景：在电商应用中，用户可以选择不同的支付方式（如信用卡、PayPal、比特币）。 实现 1 2 3 4 5 6 7 8 9 10 11 12]]></description>
+</item>
+<item>
     <title>王府井</title>
     <link>https://qq2514568380.github.io/14/</link>
     <pubDate>Thu, 18 Jan 2024 18:21:26 &#43;0800</pubDate>
@@ -85,26 +105,6 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
             </div>转载自4'000 Stars and counting, a trip down memory lane 我很幸运能够在 2014 年成为第一批踏上 Docker 之旅的人之一，尝试将监控堆栈容器化。我在 2014 年初开始了解 Docker，并花了]]></description>
-</item>
-<item>
-    <title>IDEA远程调试docker容器</title>
-    <link>https://qq2514568380.github.io/1/</link>
-    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
-    <author>李森</author>
-    <guid>https://qq2514568380.github.io/1/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
-            </div>远程 Debug 配置 IDEA中添加Remote JVM Debug配置项，拷贝以下配置 1 -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 容器启动配置 dockerfile配置 1 2 3 4 5 FROM openjdk:8 ADD ./myapp.jar ./ EXPOSE 8082 EXPOSE 5005 ENTRYPOINT [&#34;java&#34;,&#34;-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005&#34;,&#34;-jar&#34;,&#34;myapp.jar&#34;,&#34;--spring.profiles.active=prod&#34;]]]></description>
-</item>
-<item>
-    <title>北京温榆河</title>
-    <link>https://qq2514568380.github.io/9/</link>
-    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
-    <author>李森</author>
-    <guid>https://qq2514568380.github.io/9/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/7.jpg" referrerpolicy="no-referrer">
-            </div>北京温榆河]]></description>
 </item>
 </channel>
 </rss>
