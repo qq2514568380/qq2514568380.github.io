@@ -4,9 +4,19 @@
         <link>https://qq2514568380.github.io/</link>
         <description>欢迎来到森的博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
-            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Wed, 22 May 2024 11:21:26 &#43;0800</lastBuildDate>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Thu, 10 Oct 2024 11:30:26 &#43;0800</lastBuildDate>
             <atom:link href="https://qq2514568380.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>kafka在分布式系统中的使用</title>
+    <link>https://qq2514568380.github.io/11/</link>
+    <pubDate>Thu, 10 Oct 2024 11:30:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/11/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>Kafka在分布式系统中的使用 在分布式系统中，Kafka Streams 的强大之处在于其能够高效地处理跨多个节点的数据流。下面我们来构建一个更复杂的 分布式]]></description>
+</item>
+<item>
     <title>抽象工厂模式的具体实现</title>
     <link>https://qq2514568380.github.io/17/</link>
     <pubDate>Wed, 22 May 2024 11:21:26 &#43;0800</pubDate>
@@ -95,16 +105,6 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/1.jpg" referrerpolicy="no-referrer">
             </div>地铁站]]></description>
-</item>
-<item>
-    <title>docker-compose怎么来的</title>
-    <link>https://qq2514568380.github.io/6/</link>
-    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
-    <author>李森</author>
-    <guid>https://qq2514568380.github.io/6/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
-            </div>转载自4'000 Stars and counting, a trip down memory lane 我很幸运能够在 2014 年成为第一批踏上 Docker 之旅的人之一，尝试将监控堆栈容器化。我在 2014 年初开始了解 Docker，并花了]]></description>
 </item>
 </channel>
 </rss>
