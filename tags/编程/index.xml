@@ -4,7 +4,17 @@
         <link>https://qq2514568380.github.io/tags/%E7%BC%96%E7%A8%8B/</link>
         <description>编程 - Tag - 森的博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
-            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Thu, 10 Oct 2024 11:30:26 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/%E7%BC%96%E7%A8%8B/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Sat, 21 Dec 2024 08:21:26 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/%E7%BC%96%E7%A8%8B/" rel="self" type="application/rss+xml" /><item>
+    <title>netty个人理解</title>
+    <link>https://qq2514568380.github.io/18/</link>
+    <pubDate>Sat, 21 Dec 2024 08:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/18/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>Netty个人理解 Netty 的事件驱动机制本质上是一种基于事件触发的异步编程模型。简单来说，它通过监听和触发事件的方式来处理网络通信中的各种操作，做]]></description>
+</item>
+<item>
     <title>kafka在分布式系统中的使用</title>
     <link>https://qq2514568380.github.io/11/</link>
     <pubDate>Thu, 10 Oct 2024 11:30:26 &#43;0800</pubDate>
@@ -43,6 +53,26 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
             </div>自学响应式编程(一) 1、Lambda 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52]]></description>
+</item>
+<item>
+    <title>自学响应式编程(一)</title>
+    <link>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-10-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC/</link>
+    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-10-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>功能测试文章 Lighthouse (image) 1 2 3 images: [] tags: [] categories: [] 1 2 featuredImage: &#34;&#34; featuredImagePreview: &#34;&#34; tags: 文章的标签. categories: 文章所属的类别. 1 lightgallery: true $$ c = \pm\sqrt{a^2 + b^2} $$ \[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \] \begin{equation*} \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f} \end{equation*} \begin{equation}]]></description>
+</item>
+<item>
+    <title>自学响应式编程(一)</title>
+    <link>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-11-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC/</link>
+    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-11-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>功能测试文章 Lighthouse (image) 1 2 3 images: [] tags: [] categories: [] 1 2 featuredImage: &#34;&#34; featuredImagePreview: &#34;&#34; tags: 文章的标签. categories: 文章所属的类别. 1 lightgallery: true $$ c = \pm\sqrt{a^2 + b^2} $$ \[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \] \begin{equation*} \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f} \end{equation*} \begin{equation}]]></description>
 </item>
 <item>
     <title>自学响应式编程(一)</title>
