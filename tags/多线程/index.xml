@@ -4,7 +4,17 @@
         <link>https://qq2514568380.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
         <description>多线程 - Tag - 森的博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
-            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Mon, 20 Nov 2023 11:21:26 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="self" type="application/rss+xml" /><item>
+    <title>parallelstream的工作原理</title>
+    <link>https://qq2514568380.github.io/21/</link>
+    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/21/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>parallelstream的工作原理 底层实现原理： ForkJoinPool 的使用： parallelStream() 默认使用 ForkJoinPool.commonPool() 作为其执行线程池。 commonPool 的线程数通常为 Runtime.getRuntime().availableProcessors() - 1，即 CPU 核心数减一。 数据拆分]]></description>
+</item>
+<item>
     <title>线程同步...</title>
     <link>https://qq2514568380.github.io/2/</link>
     <pubDate>Mon, 20 Nov 2023 11:21:26 &#43;0800</pubDate>

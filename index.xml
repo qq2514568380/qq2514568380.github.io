@@ -17,6 +17,16 @@
             </div>kafka Stream实战 1.要求 某车企通过将车辆传感器数据实时发送到服务器，再由 Kafka 作为数据总线接收这些数据,再调用第三方API 实现数据处理; 要求:]]></description>
 </item>
 <item>
+    <title>mybatis源码解析学习(一)</title>
+    <link>https://qq2514568380.github.io/20/</link>
+    <pubDate>Sat, 01 Feb 2025 11:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/20/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>mybatis源码解析学习]]></description>
+</item>
+<item>
     <title>netty个人理解</title>
     <link>https://qq2514568380.github.io/18/</link>
     <pubDate>Sat, 21 Dec 2024 08:21:26 &#43;0800</pubDate>
@@ -95,16 +105,6 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/18.jpg" referrerpolicy="no-referrer">
             </div>代码优化之去掉if else 方式一 - 工厂类 定义一个操作接口 1 2 3 public interface Operation { int apply(int a, int b); } 实现操作， 这里只以add为例 1 2 3 4 5 6 public class Addition implements Operation { @Override public int apply(int a, int]]></description>
-</item>
-<item>
-    <title>傍晚的什刹海</title>
-    <link>https://qq2514568380.github.io/12/</link>
-    <pubDate>Thu, 30 Nov 2023 18:21:26 &#43;0800</pubDate>
-    <author>李森</author>
-    <guid>https://qq2514568380.github.io/12/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/21.jpg" referrerpolicy="no-referrer">
-            </div>功能测试文章]]></description>
 </item>
 </channel>
 </rss>
