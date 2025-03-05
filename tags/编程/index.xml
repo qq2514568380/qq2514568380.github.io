@@ -4,7 +4,17 @@
         <link>https://qq2514568380.github.io/tags/%E7%BC%96%E7%A8%8B/</link>
         <description>编程 - Tag - 森的博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
-            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Thu, 06 Feb 2025 17:21:26 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/%E7%BC%96%E7%A8%8B/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Wed, 05 Mar 2025 10:21:26 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/%E7%BC%96%E7%A8%8B/" rel="self" type="application/rss+xml" /><item>
+    <title>树形结构怎么用redis 做缓存</title>
+    <link>https://qq2514568380.github.io/23/</link>
+    <pubDate>Wed, 05 Mar 2025 10:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/23/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>树形结构怎么用redis 做缓存 1、树形结构的数据存储设计 树形结构通常包含父子节点关系，建议采用 哈希表（Hash） + 有序集合（ZSet） 组合存]]></description>
+</item>
+<item>
     <title>kafka Stream实战</title>
     <link>https://qq2514568380.github.io/19/</link>
     <pubDate>Thu, 06 Feb 2025 17:21:26 &#43;0800</pubDate>
@@ -93,16 +103,6 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
             </div>每日一题-01背包(动规) 题目 1 给定 N 个物品和一个容量为 W 的背包。第 i 个物品的重量为 weight[i]，价值为 value[i]。求解如何选择]]></description>
-</item>
-<item>
-    <title>自学响应式编程(一)</title>
-    <link>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-12-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC/</link>
-    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
-    <author>李森</author>
-    <guid>https://qq2514568380.github.io/first_post-%E5%89%AF%E6%9C%AC-12-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC-%E5%89%AF%E6%9C%AC/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
-            </div>功能测试文章 Lighthouse (image) 1 2 3 images: [] tags: [] categories: [] 1 2 featuredImage: &#34;&#34; featuredImagePreview: &#34;&#34; tags: 文章的标签. categories: 文章所属的类别. 1 lightgallery: true $$ c = \pm\sqrt{a^2 + b^2} $$ \[ f(x)=\int_{-\infty}^{\infty} \hat{f}(\xi) e^{2 \pi i \xi x} d \xi \] \begin{equation*} \rho \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}=\nabla \cdot \mathbb{P}+\rho \mathbf{f} \end{equation*} \begin{equation}]]></description>
 </item>
 </channel>
 </rss>

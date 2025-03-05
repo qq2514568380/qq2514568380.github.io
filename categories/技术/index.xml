@@ -4,7 +4,17 @@
         <link>https://qq2514568380.github.io/categories/%E6%8A%80%E6%9C%AF/</link>
         <description>技术 - Category - 森的博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
-            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Thu, 06 Feb 2025 17:21:26 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/categories/%E6%8A%80%E6%9C%AF/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Wed, 05 Mar 2025 10:21:26 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/categories/%E6%8A%80%E6%9C%AF/" rel="self" type="application/rss+xml" /><item>
+    <title>树形结构怎么用redis 做缓存</title>
+    <link>https://qq2514568380.github.io/23/</link>
+    <pubDate>Wed, 05 Mar 2025 10:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/23/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>树形结构怎么用redis 做缓存 1、树形结构的数据存储设计 树形结构通常包含父子节点关系，建议采用 哈希表（Hash） + 有序集合（ZSet） 组合存]]></description>
+</item>
+<item>
     <title>kafka Stream实战</title>
     <link>https://qq2514568380.github.io/19/</link>
     <pubDate>Thu, 06 Feb 2025 17:21:26 &#43;0800</pubDate>
@@ -93,16 +103,6 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
             </div>远程 Debug 配置 IDEA中添加Remote JVM Debug配置项，拷贝以下配置 1 -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 容器启动配置 dockerfile配置 1 2 3 4 5 FROM openjdk:8 ADD ./myapp.jar ./ EXPOSE 8082 EXPOSE 5005 ENTRYPOINT [&#34;java&#34;,&#34;-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005&#34;,&#34;-jar&#34;,&#34;myapp.jar&#34;,&#34;--spring.profiles.active=prod&#34;]]]></description>
-</item>
-<item>
-    <title>parallelstream的工作原理</title>
-    <link>https://qq2514568380.github.io/21/</link>
-    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
-    <author>李森</author>
-    <guid>https://qq2514568380.github.io/21/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
-            </div>parallelstream的工作原理 底层实现原理： ForkJoinPool 的使用： parallelStream() 默认使用 ForkJoinPool.commonPool() 作为其执行线程池。 commonPool 的线程数通常为 Runtime.getRuntime().availableProcessors() - 1，即 CPU 核心数减一。 数据拆分]]></description>
 </item>
 </channel>
 </rss>

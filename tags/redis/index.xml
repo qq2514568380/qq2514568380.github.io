@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>redis - Tag - 森的博客</title>
+        <link>https://qq2514568380.github.io/tags/redis/</link>
+        <description>redis - Tag - 森的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Wed, 05 Mar 2025 10:21:26 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/redis/" rel="self" type="application/rss+xml" /><item>
+    <title>树形结构怎么用redis 做缓存</title>
+    <link>https://qq2514568380.github.io/23/</link>
+    <pubDate>Wed, 05 Mar 2025 10:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/23/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>树形结构怎么用redis 做缓存 1、树形结构的数据存储设计 树形结构通常包含父子节点关系，建议采用 哈希表（Hash） + 有序集合（ZSet） 组合存]]></description>
+</item>
+</channel>
+</rss>

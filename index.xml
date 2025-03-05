@@ -4,9 +4,19 @@
         <link>https://qq2514568380.github.io/</link>
         <description>欢迎来到森的博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
-            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Thu, 06 Feb 2025 17:21:26 &#43;0800</lastBuildDate>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Wed, 05 Mar 2025 10:21:26 &#43;0800</lastBuildDate>
             <atom:link href="https://qq2514568380.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>树形结构怎么用redis 做缓存</title>
+    <link>https://qq2514568380.github.io/23/</link>
+    <pubDate>Wed, 05 Mar 2025 10:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/23/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>树形结构怎么用redis 做缓存 1、树形结构的数据存储设计 树形结构通常包含父子节点关系，建议采用 哈希表（Hash） + 有序集合（ZSet） 组合存]]></description>
+</item>
+<item>
     <title>kafka Stream实战</title>
     <link>https://qq2514568380.github.io/19/</link>
     <pubDate>Thu, 06 Feb 2025 17:21:26 &#43;0800</pubDate>
@@ -95,16 +105,6 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
             </div>自学响应式编程(一) 1、Lambda 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52]]></description>
-</item>
-<item>
-    <title>代码优化之去掉if else</title>
-    <link>https://qq2514568380.github.io/10/</link>
-    <pubDate>Wed, 20 Dec 2023 11:21:26 &#43;0800</pubDate>
-    <author>李森</author>
-    <guid>https://qq2514568380.github.io/10/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/18.jpg" referrerpolicy="no-referrer">
-            </div>代码优化之去掉if else 方式一 - 工厂类 定义一个操作接口 1 2 3 public interface Operation { int apply(int a, int b); } 实现操作， 这里只以add为例 1 2 3 4 5 6 public class Addition implements Operation { @Override public int apply(int a, int]]></description>
 </item>
 </channel>
 </rss>
