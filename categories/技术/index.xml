@@ -95,14 +95,14 @@
             </div>代码优化之去掉if else 方式一 - 工厂类 定义一个操作接口 1 2 3 public interface Operation { int apply(int a, int b); } 实现操作， 这里只以add为例 1 2 3 4 5 6 public class Addition implements Operation { @Override public int apply(int a, int]]></description>
 </item>
 <item>
-    <title>IDEA远程调试docker容器</title>
-    <link>https://qq2514568380.github.io/1/</link>
+    <title>adapter设计模式</title>
+    <link>https://qq2514568380.github.io/24/</link>
     <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
     <author>李森</author>
-    <guid>https://qq2514568380.github.io/1/</guid>
+    <guid>https://qq2514568380.github.io/24/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
-            </div>远程 Debug 配置 IDEA中添加Remote JVM Debug配置项，拷贝以下配置 1 -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 容器启动配置 dockerfile配置 1 2 3 4 5 FROM openjdk:8 ADD ./myapp.jar ./ EXPOSE 8082 EXPOSE 5005 ENTRYPOINT [&#34;java&#34;,&#34;-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005&#34;,&#34;-jar&#34;,&#34;myapp.jar&#34;,&#34;--spring.profiles.active=prod&#34;]]]></description>
+            </div>adapter设计模式 适配器设计模式（Adapter Pattern）是一种结构型设计模式，主要用于解决不同接口之间的兼容性问题。它通过创建一]]></description>
 </item>
 </channel>
 </rss>

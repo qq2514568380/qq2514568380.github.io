@@ -85,6 +85,16 @@
             </div>自学响应式编程(一) 1、Lambda 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52]]></description>
 </item>
 <item>
+    <title>adapter设计模式</title>
+    <link>https://qq2514568380.github.io/24/</link>
+    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/24/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>adapter设计模式 适配器设计模式（Adapter Pattern）是一种结构型设计模式，主要用于解决不同接口之间的兼容性问题。它通过创建一]]></description>
+</item>
+<item>
     <title>parallelstream的工作原理</title>
     <link>https://qq2514568380.github.io/21/</link>
     <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
@@ -93,16 +103,6 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
             </div>parallelstream的工作原理 底层实现原理： ForkJoinPool 的使用： parallelStream() 默认使用 ForkJoinPool.commonPool() 作为其执行线程池。 commonPool 的线程数通常为 Runtime.getRuntime().availableProcessors() - 1，即 CPU 核心数减一。 数据拆分]]></description>
-</item>
-<item>
-    <title>每日一题-01背包(动规)</title>
-    <link>https://qq2514568380.github.io/22/</link>
-    <pubDate>Tue, 21 Nov 2023 11:21:26 &#43;0800</pubDate>
-    <author>李森</author>
-    <guid>https://qq2514568380.github.io/22/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
-            </div>每日一题-01背包(动规) 题目 1 给定 N 个物品和一个容量为 W 的背包。第 i 个物品的重量为 weight[i]，价值为 value[i]。求解如何选择]]></description>
 </item>
 </channel>
 </rss>
