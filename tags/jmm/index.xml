@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>JMM - Tag - 森的博客</title>
+        <link>https://qq2514568380.github.io/tags/jmm/</link>
+        <description>JMM - Tag - 森的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Fri, 12 Jan 2024 21:18:36 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/jmm/" rel="self" type="application/rss+xml" /><item>
+    <title>JMM 与 Happens-Before 实战手册：把并发错误关进笼子</title>
+    <link>https://qq2514568380.github.io/25/</link>
+    <pubDate>Fri, 12 Jan 2024 21:18:36 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/25/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>现场记录：故障发生前后 那次事故之后，我把所有共享状态都补了发布语义注释。 场景：支付风控服务 症状：偶发脏读和状态回退 主线：可见性、有序性、发布]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>AQS - Tag - 森的博客</title>
+        <link>https://qq2514568380.github.io/tags/aqs/</link>
+        <description>AQS - Tag - 森的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Sat, 27 Jan 2024 22:06:12 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/aqs/" rel="self" type="application/rss+xml" /><item>
+    <title>AQS 源码拆解笔记：ReentrantLock 到 Condition 的全链路</title>
+    <link>https://qq2514568380.github.io/26/</link>
+    <pubDate>Sat, 27 Jan 2024 22:06:12 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/26/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>复盘问答：先回答最难的问题 Q：为什么这篇要重写？ A：因为在 库存扣减核心链路 中，高峰时线程阻塞堆积 一直重复出现，靠临时补丁解决不了。 Q：最核心]]></description>
+</item>
+</channel>
+</rss>

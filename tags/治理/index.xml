@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>治理 - Tag - 森的博客</title>
+        <link>https://qq2514568380.github.io/tags/%E6%B2%BB%E7%90%86/</link>
+        <description>治理 - Tag - 森的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Sat, 14 Sep 2024 20:16:45 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/%E6%B2%BB%E7%90%86/" rel="self" type="application/rss+xml" /><item>
+    <title>Java 安全编码实战：反序列化、RCE 与依赖供应链</title>
+    <link>https://qq2514568380.github.io/40/</link>
+    <pubDate>Sat, 14 Sep 2024 20:16:45 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/40/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>安全专项：默认不可信 安全基线 对外输入一律不可信，这是默认前提。任何“只给内部用”的接口，最终都可能暴露在外部流量前。 五层防护 输入规范化与白名]]></description>
+</item>
+</channel>
+</rss>

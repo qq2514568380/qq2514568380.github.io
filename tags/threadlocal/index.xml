@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>ThreadLocal - Tag - 森的博客</title>
+        <link>https://qq2514568380.github.io/tags/threadlocal/</link>
+        <description>ThreadLocal - Tag - 森的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Thu, 28 Mar 2024 00:18:12 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/threadlocal/" rel="self" type="application/rss+xml" /><item>
+    <title>ThreadLocal 与上下文传递：一次隐蔽内存泄漏复盘</title>
+    <link>https://qq2514568380.github.io/30/</link>
+    <pubDate>Thu, 28 Mar 2024 00:18:12 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/30/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>值班夜记：看起来不大，实际很致命 这篇属于标准故障复盘体：先事实，再推理，最后动作项。 事实 发生模块：日志追踪中间件 主要症状：线程池复用导致 trace 串]]></description>
+</item>
+</channel>
+</rss>

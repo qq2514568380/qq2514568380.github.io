@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Kafka - Tag - 森的博客</title>
+        <link>https://qq2514568380.github.io/tags/kafka/</link>
+        <description>Kafka - Tag - 森的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Sun, 26 May 2024 21:07:25 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/kafka/" rel="self" type="application/rss+xml" /><item>
+    <title>Kafka 消费者再均衡实战：顺序性与吞吐的折中</title>
+    <link>https://qq2514568380.github.io/34/</link>
+    <pubDate>Sun, 26 May 2024 21:07:25 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/34/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>备忘清单：未来再遇到就按这个来 给未来自己的备忘 再均衡总会发生，不要把它当异常事件。真正的工作是保证再均衡期间语义不乱、吞吐可接受、恢复可预测]]></description>
+</item>
+</channel>
+</rss>

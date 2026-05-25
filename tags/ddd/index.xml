@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>DDD - Tag - 森的博客</title>
+        <link>https://qq2514568380.github.io/tags/ddd/</link>
+        <description>DDD - Tag - 森的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Mon, 18 Nov 2024 21:26:17 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/ddd/" rel="self" type="application/rss+xml" /><item>
+    <title>DDD &#43; 六边形架构在 Java 落地：从 CRUD 到领域模型</title>
+    <link>https://qq2514568380.github.io/43/</link>
+    <pubDate>Mon, 18 Nov 2024 21:26:17 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/43/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>架构沉淀：让模型替代 if-else 为什么从 CRUD 走向模型 当业务规则复杂度上升时，把规则分散在 Controller/Service 会迅速失控。领域模型的意义是把不变量集中管理，减少“到处都能改]]></description>
+</item>
+</channel>
+</rss>

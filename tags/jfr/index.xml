@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>JFR - Tag - 森的博客</title>
+        <link>https://qq2514568380.github.io/tags/jfr/</link>
+        <description>JFR - Tag - 森的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Thu, 29 Aug 2024 23:05:31 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/jfr/" rel="self" type="application/rss+xml" /><item>
+    <title>JFR &#43; jcmd 线上性能诊断：一线排障路线图</title>
+    <link>https://qq2514568380.github.io/39/</link>
+    <pubDate>Thu, 29 Aug 2024 23:05:31 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/39/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>排障路径：证据链比直觉更重要 排障路线图（实操版） Step 0：冻结现场 先不要立刻重启服务。先抓线程、堆、GC、JFR，留证据。 Step 1：快速定性 CPU 型：热]]></description>
+</item>
+</channel>
+</rss>

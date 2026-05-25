@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Agent - Tag - 森的博客</title>
+        <link>https://qq2514568380.github.io/tags/agent/</link>
+        <description>Agent - Tag - 森的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Sun, 06 Oct 2024 19:58:22 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/agent/" rel="self" type="application/rss+xml" /><item>
+    <title>Java Agent 与字节码增强：从监控埋点到运行时治理</title>
+    <link>https://qq2514568380.github.io/41/</link>
+    <pubDate>Sun, 06 Oct 2024 19:58:22 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/41/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>平台化改造：把重复劳动自动化 为什么做 Agent 化 手工埋点在规模变大后一定失控：口径不一致、遗漏严重、维护成本高。Agent 化的价值是把观测规则平台化]]></description>
+</item>
+</channel>
+</rss>

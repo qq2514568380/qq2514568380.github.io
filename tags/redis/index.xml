@@ -14,5 +14,15 @@
                 <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
             </div>树形结构怎么用redis 做缓存 1、树形结构的数据存储设计 树形结构通常包含父子节点关系，建议采用 哈希表（Hash） + 有序集合（ZSet） 组合存]]></description>
 </item>
+<item>
+    <title>Redis 分布式锁与 Redisson：安全性优先的落地手册</title>
+    <link>https://qq2514568380.github.io/36/</link>
+    <pubDate>Sat, 29 Jun 2024 20:44:17 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/36/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>选型辩论：为什么我们这样选 选型先问安全性 分布式锁最常见误区是先比较性能，再考虑安全。正确顺序应该反过来：先确认不会误删、不会永久占锁、不会在]]></description>
+</item>
 </channel>
 </rss>

@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>ClassLoader - Tag - 森的博客</title>
+        <link>https://qq2514568380.github.io/tags/classloader/</link>
+        <description>ClassLoader - Tag - 森的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Thu, 04 Apr 2024 19:45:18 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/classloader/" rel="self" type="application/rss+xml" /><item>
+    <title>类加载隔离与插件化：ClassLoader 边界设计清单</title>
+    <link>https://qq2514568380.github.io/31/</link>
+    <pubDate>Thu, 04 Apr 2024 19:45:18 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/31/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>架构札记：先画边界再写代码 背景 规则引擎插件平台 在扩展插件后出现了 依赖冲突与 LinkageError。这个问题本质不是“某个包冲突”，而是边界]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>锁优化 - Tag - 森的博客</title>
+        <link>https://qq2514568380.github.io/tags/%E9%94%81%E4%BC%98%E5%8C%96/</link>
+        <description>锁优化 - Tag - 森的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Thu, 26 Sep 2024 11:21:26 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/%E9%94%81%E4%BC%98%E5%8C%96/" rel="self" type="application/rss+xml" /><item>
+    <title>Java锁升级路径与synchronized实现细节</title>
+    <link>https://qq2514568380.github.io/28/</link>
+    <pubDate>Thu, 26 Sep 2024 11:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/28/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>主题简介 synchronized 在现代 JVM 中已不再“重”，理解锁状态升级有助于定位竞争热点。 核心要点 偏向锁、轻量级锁、重量级锁的触发条件 对象头 Mark Word 与锁记录关系 锁消除]]></description>
+</item>
+</channel>
+</rss>

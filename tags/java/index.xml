@@ -1,18 +1,108 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>java - Tag - 森的博客</title>
+        <title>Java - Tag - 森的博客</title>
         <link>https://qq2514568380.github.io/tags/java/</link>
-        <description>java - Tag - 森的博客</description>
+        <description>Java - Tag - 森的博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
-            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Sat, 18 Nov 2023 11:21:26 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/java/" rel="self" type="application/rss+xml" /><item>
-    <title>SpringBoot集成flyway</title>
-    <link>https://qq2514568380.github.io/4/</link>
-    <pubDate>Sat, 18 Nov 2023 11:21:26 &#43;0800</pubDate>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Sat, 07 Dec 2024 20:09:50 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/java/" rel="self" type="application/rss+xml" /><item>
+    <title>GraalVM Native Image 上线清单：启动速度与可观测性平衡</title>
+    <link>https://qq2514568380.github.io/44/</link>
+    <pubDate>Sat, 07 Dec 2024 20:09:50 &#43;0800</pubDate>
     <author>李森</author>
-    <guid>https://qq2514568380.github.io/4/</guid>
+    <guid>https://qq2514568380.github.io/44/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
-            </div>SpringBoot集成flyway 在 pom.xml 加入如下依赖 1 2 3 4 5 6 7 8 &lt;dependency&gt; &lt;groupId&gt;org.flywaydb&lt;/groupId&gt; &lt;artifactId&gt;flyway-core&lt;/artifactId&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.flywaydb&lt;/groupId&gt; &lt;artifactId&gt;flyway-mysql&lt;/artifactId&gt; &lt;/dependency&gt; 在application.yml中加入配置 1 2 3 4 5 6 7]]></description>
+            </div>年终收官：把经验固定为流程 年末总结视角 这一篇关注的是“上线后还能不能稳定维护”。很多优化在发布当天看起来很好，但如果缺少可观测和应急手段，后]]></description>
+</item>
+<item>
+    <title>DDD &#43; 六边形架构在 Java 落地：从 CRUD 到领域模型</title>
+    <link>https://qq2514568380.github.io/43/</link>
+    <pubDate>Mon, 18 Nov 2024 21:26:17 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/43/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>架构沉淀：让模型替代 if-else 为什么从 CRUD 走向模型 当业务规则复杂度上升时，把规则分散在 Controller/Service 会迅速失控。领域模型的意义是把不变量集中管理，减少“到处都能改]]></description>
+</item>
+<item>
+    <title>虚拟线程迁移记录：从线程池模型到 Loom 思维</title>
+    <link>https://qq2514568380.github.io/42/</link>
+    <pubDate>Wed, 30 Oct 2024 23:41:59 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/42/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>预研周记：先小范围试错 迁移日志（节选） 第 1 天：选两个高 IO、低风险接口做试点。 第 5 天：发现旧代码里线程本地变量依赖过多，先清理。 第 9 天：结构]]></description>
+</item>
+<item>
+    <title>Java Agent 与字节码增强：从监控埋点到运行时治理</title>
+    <link>https://qq2514568380.github.io/41/</link>
+    <pubDate>Sun, 06 Oct 2024 19:58:22 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/41/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>平台化改造：把重复劳动自动化 为什么做 Agent 化 手工埋点在规模变大后一定失控：口径不一致、遗漏严重、维护成本高。Agent 化的价值是把观测规则平台化]]></description>
+</item>
+<item>
+    <title>Java 安全编码实战：反序列化、RCE 与依赖供应链</title>
+    <link>https://qq2514568380.github.io/40/</link>
+    <pubDate>Sat, 14 Sep 2024 20:16:45 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/40/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>安全专项：默认不可信 安全基线 对外输入一律不可信，这是默认前提。任何“只给内部用”的接口，最终都可能暴露在外部流量前。 五层防护 输入规范化与白名]]></description>
+</item>
+<item>
+    <title>JFR &#43; jcmd 线上性能诊断：一线排障路线图</title>
+    <link>https://qq2514568380.github.io/39/</link>
+    <pubDate>Thu, 29 Aug 2024 23:05:31 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/39/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>排障路径：证据链比直觉更重要 排障路线图（实操版） Step 0：冻结现场 先不要立刻重启服务。先抓线程、堆、GC、JFR，留证据。 Step 1：快速定性 CPU 型：热]]></description>
+</item>
+<item>
+    <title>Resilience4j 全家桶实战：限流、熔断、舱壁协同</title>
+    <link>https://qq2514568380.github.io/38/</link>
+    <pubDate>Sat, 03 Aug 2024 21:53:12 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/38/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>活动前演练：把风险暴露在上线前 先回答最常见的误解 误解 1：限流会影响转化，所以尽量别开。 误解 2：熔断开启就是系统失败。 误解 3：舱壁隔离只是“多]]></description>
+</item>
+<item>
+    <title>幂等体系建设：接口、消息、任务三层防重</title>
+    <link>https://qq2514568380.github.io/37/</link>
+    <pubDate>Mon, 08 Jul 2024 22:37:03 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/37/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>分层防线：别把幂等当成单点能力 三层幂等防线 第一层：接口层幂等键，快速拒绝重复请求。 第二层：消息层去重，抵御重复投递。 第三层：存储层唯一约束，]]></description>
+</item>
+<item>
+    <title>Redis 分布式锁与 Redisson：安全性优先的落地手册</title>
+    <link>https://qq2514568380.github.io/36/</link>
+    <pubDate>Sat, 29 Jun 2024 20:44:17 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/36/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>选型辩论：为什么我们这样选 选型先问安全性 分布式锁最常见误区是先比较性能，再考虑安全。正确顺序应该反过来：先确认不会误删、不会永久占锁、不会在]]></description>
+</item>
+<item>
+    <title>Spring 事务深水区：传播行为、隔离级别与回滚语义</title>
+    <link>https://qq2514568380.github.io/35/</link>
+    <pubDate>Tue, 11 Jun 2024 23:22:40 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/35/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>半年回看：哪些设计值，哪些不值 事务这件事，别只看注解 在 结算中心 中，问题常常不是“有没有事务”，而是事务边界和业务边界错位。只要边界错位，回滚]]></description>
 </item>
 </channel>
 </rss>

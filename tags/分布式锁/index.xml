@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>分布式锁 - Tag - 森的博客</title>
+        <link>https://qq2514568380.github.io/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/</link>
+        <description>分布式锁 - Tag - 森的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Sat, 29 Jun 2024 20:44:17 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/" rel="self" type="application/rss+xml" /><item>
+    <title>Redis 分布式锁与 Redisson：安全性优先的落地手册</title>
+    <link>https://qq2514568380.github.io/36/</link>
+    <pubDate>Sat, 29 Jun 2024 20:44:17 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/36/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>选型辩论：为什么我们这样选 选型先问安全性 分布式锁最常见误区是先比较性能，再考虑安全。正确顺序应该反过来：先确认不会误删、不会永久占锁、不会在]]></description>
+</item>
+</channel>
+</rss>

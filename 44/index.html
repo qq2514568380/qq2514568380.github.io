@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>GraalVM Native Image 上线清单：启动速度与可观测性平衡 - 森的博客</title><meta name="Description" content="欢迎来到森的博客"><meta property="og:title" content="GraalVM Native Image 上线清单：启动速度与可观测性平衡" />
+<meta property="og:description" content="年终收官：把经验固定为流程 年末总结视角 这一篇关注的是“上线后还能不能稳定维护”。很多优化在发布当天看起来很好，但如果缺少可观测和应急手段，后" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://qq2514568380.github.io/44/" /><meta property="og:image" content="https://qq2514568380.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-12-07T20:09:50+08:00" />
+<meta property="article:modified_time" content="2024-12-07T20:09:50+08:00" /><meta property="og:site_name" content="我的网站" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://qq2514568380.github.io/logo.png"/>
+
+<meta name="twitter:title" content="GraalVM Native Image 上线清单：启动速度与可观测性平衡"/>
+<meta name="twitter:description" content="年终收官：把经验固定为流程 年末总结视角 这一篇关注的是“上线后还能不能稳定维护”。很多优化在发布当天看起来很好，但如果缺少可观测和应急手段，后"/>
+<meta name="application-name" content="我的网站">
+<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://qq2514568380.github.io/44/" /><link rel="prev" href="https://qq2514568380.github.io/43/" /><link rel="next" href="https://qq2514568380.github.io/18/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "GraalVM Native Image 上线清单：启动速度与可观测性平衡",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/qq2514568380.github.io\/44\/"
+        },"genre": "posts","keywords": "Java, GraalVM, 云原生","wordcount":  2642 ,
+        "url": "https:\/\/qq2514568380.github.io\/44\/","datePublished": "2024-12-07T20:09:50+08:00","dateModified": "2024-12-07T20:09:50+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "李森"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="森的博客">森的博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="森的博客">森的博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">GraalVM Native Image 上线清单：启动速度与可观测性平衡</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>李森</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E6%8A%80%E6%9C%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>技术</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-12-07">2024-12-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2642 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;<span id="/44/" class="leancloud_visitors" data-flag-title="GraalVM Native Image 上线清单：启动速度与可观测性平衡">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;views
+                    </span>&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/lighthouse.jpg"
+        data-srcset="/images/lighthouse.jpg, /images/lighthouse.jpg 1.5x, /images/lighthouse.jpg 2x"
+        data-sizes="auto"
+        alt="/images/lighthouse.jpg"
+        title="/images/lighthouse.jpg" width="1972" height="1315" /></div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#年终收官把经验固定为流程">年终收官：把经验固定为流程</a></li>
+    <li><a href="#年末总结视角">年末总结视角</a></li>
+    <li><a href="#实施顺序">实施顺序</a></li>
+    <li><a href="#命令片段">命令片段</a></li>
+    <li><a href="#上线清单">上线清单</a></li>
+    <li><a href="#深入拆解为什么这类问题总在高峰期爆发">深入拆解：为什么这类问题总在高峰期爆发</a></li>
+    <li><a href="#生产落地蓝图可直接执行">生产落地蓝图（可直接执行）</a></li>
+    <li><a href="#指标与容量模型">指标与容量模型</a></li>
+    <li><a href="#典型踩坑样本">典型踩坑样本</a></li>
+    <li><a href="#native-上线后的长期维护点">Native 上线后的长期维护点</a></li>
+    <li><a href="#复盘后的个人原则">复盘后的个人原则</a></li>
+    <li><a href="#深水区案例推演">深水区案例推演</a>
+      <ul>
+        <li><a href="#案例-1高峰入口流量叠加下游抖动">案例 1：高峰入口流量叠加下游抖动</a></li>
+        <li><a href="#案例-2观测面不完整导致误诊">案例 2：观测面不完整导致误诊</a></li>
+        <li><a href="#案例-3改动过多导致结论失真">案例 3：改动过多导致结论失真</a></li>
+        <li><a href="#案例-4回滚不可用导致二次事故">案例 4：回滚不可用导致二次事故</a></li>
+        <li><a href="#案例-5语义正确性被性能优化破坏">案例 5：语义正确性被性能优化破坏</a></li>
+      </ul>
+    </li>
+    <li><a href="#落地行动手册可给团队直接执行">落地行动手册（可给团队直接执行）</a>
+      <ul>
+        <li><a href="#第一步建立统一语言">第一步：建立统一语言</a></li>
+        <li><a href="#第二步建立统一预算">第二步：建立统一预算</a></li>
+        <li><a href="#第三步建立统一观测">第三步：建立统一观测</a></li>
+        <li><a href="#第四步建立统一演练">第四步：建立统一演练</a></li>
+        <li><a href="#第五步建立统一文档">第五步：建立统一文档</a></li>
+        <li><a href="#第六步建立统一复盘">第六步：建立统一复盘</a></li>
+      </ul>
+    </li>
+    <li><a href="#结尾从会用技术到会做系统">结尾：从“会用技术”到“会做系统”</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><meting-js auto="https://music.163.com/#/song?id=2030754234" theme="#448aff" fixed="true" autoplay="true"></meting-js>
+<h2 id="年终收官把经验固定为流程">年终收官：把经验固定为流程</h2>
+<h2 id="年末总结视角">年末总结视角</h2>
+<p>这一篇关注的是“上线后还能不能稳定维护”。很多优化在发布当天看起来很好，但如果缺少可观测和应急手段，后续维护成本会反噬团队。</p>
+<h2 id="实施顺序">实施顺序</h2>
+<ul>
+<li>识别 AOT 不兼容点（反射、代理、资源加载）。</li>
+<li>先用 agent 生成配置，再手工收敛。</li>
+<li>补齐指标、日志、追踪，确保故障可定位。</li>
+<li>做冷启动压测，评估 SLA 改善幅度。</li>
+</ul>
+<h2 id="命令片段">命令片段</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">native</span><span class="o">-</span><span class="n">image</span><span class="w"> </span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">fallback</span><span class="w"> </span><span class="err">\</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">-</span><span class="n">H</span><span class="p">:</span><span class="n">Name</span><span class="o">=</span><span class="n">task</span><span class="o">-</span><span class="n">app</span><span class="w"> </span><span class="err">\</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">-</span><span class="n">H</span><span class="p">:</span><span class="o">+</span><span class="n">ReportExceptionStackTraces</span><span class="w"> </span><span class="err">\</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">-</span><span class="n">jar</span><span class="w"> </span><span class="n">app</span><span class="p">.</span><span class="na">jar</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">java</span><span class="w"> </span><span class="o">-</span><span class="n">agentlib</span><span class="p">:</span><span class="kd">native</span><span class="o">-</span><span class="n">image</span><span class="o">-</span><span class="n">agent</span><span class="o">=</span><span class="n">config</span><span class="o">-</span><span class="n">output</span><span class="o">-</span><span class="n">dir</span><span class="o">=</span><span class="p">.</span><span class="o">/</span><span class="n">ni</span><span class="o">-</span><span class="n">config</span><span class="w"> </span><span class="o">-</span><span class="n">jar</span><span class="w"> </span><span class="n">app</span><span class="p">.</span><span class="na">jar</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="上线清单">上线清单</h2>
+<ul>
+<li><i class="far fa-square fa-fw" aria-hidden="true"></i> Native 包构建可重复。</li>
+<li><i class="far fa-square fa-fw" aria-hidden="true"></i> 回退 JVM 包路径清晰。</li>
+<li><i class="far fa-square fa-fw" aria-hidden="true"></i> 关键告警阈值已调整。</li>
+<li><i class="far fa-square fa-fw" aria-hidden="true"></i> 值班演练完成。</li>
+</ul>
+<p>年末复盘稿：优化启动速度时，必须同步补齐可观测能力。</p>
+<h2 id="深入拆解为什么这类问题总在高峰期爆发">深入拆解：为什么这类问题总在高峰期爆发</h2>
+<p>在 <strong>Serverless 任务服务</strong> 里，冷启动慢影响 SLA 往往不是一个“单点 bug”，而是多个小问题叠加后的系统性结果。常见链路是：</p>
+<ul>
+<li>入口流量突刺导致排队增长；</li>
+<li>排队增长放大超时与重试；</li>
+<li>重试放大下游压力；</li>
+<li>下游波动反过来拖慢主链路；</li>
+<li>观测不完整时，团队会误判根因并继续叠加改动。</li>
+</ul>
+<p>要打断这条链路，必须先把“正确性边界”写清楚，再谈吞吐优化。没有边界，优化很容易变成风险转移：你把一个指标做漂亮了，却把问题藏到另一个时间窗口。</p>
+<h2 id="生产落地蓝图可直接执行">生产落地蓝图（可直接执行）</h2>
+<ol>
+<li>定义不可破坏语义：例如幂等、顺序、余额不为负、状态不可回退。</li>
+<li>建立统一预算：超时预算、重试预算、队列预算必须统一，不允许各层随意叠加。</li>
+<li>做资源隔离：CPU 密集、IO 密集、后台批任务至少分三类资源池。</li>
+<li>建立降级路径：可选能力随时可关，核心能力优先保活。</li>
+<li>做压测基线：固定流量模型，记录 P50/P90/P99/P999 与错误分布。</li>
+<li>做灰度机制：小流量观察 30-60 分钟后再扩容，不跨越式放量。</li>
+<li>做回滚预案：每次改动必须有“分钟级可执行”的回滚步骤。</li>
+<li>做复盘沉淀：把经验写进 runbook，减少对个体经验依赖。</li>
+</ol>
+<h2 id="指标与容量模型">指标与容量模型</h2>
+<p>我通常会在看板里同时放四组指标，避免“单指标幻觉”：</p>
+<ul>
+<li>用户体验层：成功率、超时率、P99/P999。</li>
+<li>系统资源层：CPU、堆/堆外内存、线程池活跃度、队列积压。</li>
+<li>依赖稳定层：下游失败率、RT 分布、熔断命中次数。</li>
+<li>稳态演进层：日常波动、峰值窗口、发布前后对比。</li>
+</ul>
+<p>容量规划时，建议留出至少 30% 的瞬时余量。原因很现实：线上波动不是线性发生，异常往往是“突发叠加突发”，余量不足时任何局部抖动都会被放大。</p>
+<h2 id="典型踩坑样本">典型踩坑样本</h2>
+<ul>
+<li>只优化平均延迟，忽略尾延迟，结果用户投诉仍然集中。</li>
+<li>把重试当可靠性手段，结果在下游波动时形成重试风暴。</li>
+<li>变更多点同时进行，导致无法判断哪个改动生效。</li>
+<li>没有统一日志字段，故障发生后证据链断裂。</li>
+<li>回滚脚本未经演练，关键时刻无法快速恢复。</li>
+</ul>
+<h2 id="native-上线后的长期维护点">Native 上线后的长期维护点</h2>
+<ul>
+<li>每次依赖升级都需要重做 Native 构建验证。</li>
+<li>反射配置需要与业务变更联动更新。</li>
+<li>指标与日志埋点不能因为 AOT 优化被削弱。</li>
+</ul>
+<p>年末我最大的收获是：性能优化必须和可观测并行推进。</p>
+<h2 id="复盘后的个人原则">复盘后的个人原则</h2>
+<ul>
+<li>先证据后结论，先边界后优化。</li>
+<li>先保活后提速，先可回滚后放量。</li>
+<li>先统一策略再做局部微调，避免模块各自为战。</li>
+<li>任何“高阶技巧”都要落在可观测、可演练、可交接上。</li>
+</ul>
+<p>如果把这四条守住，AOT 约束、反射配置、镜像优化 这类高阶主题就不会停留在“概念理解”，而是能稳定变成生产能力。</p>
+<h2 id="深水区案例推演">深水区案例推演</h2>
+<p>下面用一个更贴近线上的推演模型，说明为什么 <strong>AOT 约束、反射配置、镜像优化</strong> 必须体系化处理，而不能靠某个参数“救全场”。</p>
+<h3 id="案例-1高峰入口流量叠加下游抖动">案例 1：高峰入口流量叠加下游抖动</h3>
+<p>在 Serverless 任务服务 这类链路里，入口流量通常不是平滑增长，而是“脉冲式突刺”。当突刺遇到下游轻微抖动时，系统会先出现排队增长，随后触发超时和重试。重试本意是提升成功率，但在预算缺失时会把局部抖动放大成全链路拥塞。这个阶段如果只盯平均延迟，团队往往误判为“总体没问题”，直到用户侧开始出现明显超时。</p>
+<h3 id="案例-2观测面不完整导致误诊">案例 2：观测面不完整导致误诊</h3>
+<p>很多团队只保留接口级监控，不看线程池、队列、锁、GC、下游 RT 的联动。结果是故障发生后只能看到“慢”，却不知道“慢在哪里”。我在 2024 年做的几次复盘里，超过一半的恢复时间都浪费在“猜根因”上，而不是“修根因”上。把证据链补齐后，恢复时间通常可以压缩 30%-50%。</p>
+<h3 id="案例-3改动过多导致结论失真">案例 3：改动过多导致结论失真</h3>
+<p>线上压力下最容易犯的错误，是同时改多个参数并立即发布。短期看似恢复，长期却无法解释“到底哪个改动有效”。这会让后续治理难以复制，团队又回到经验驱动。正确做法是单变量改动 + 固定流量模型 + 同窗口对比，把每次变化都变成可解释结果。</p>
+<h3 id="案例-4回滚不可用导致二次事故">案例 4：回滚不可用导致二次事故</h3>
+<p>不少系统有回滚方案，但没有演练。真正故障时才发现开关语义不清、依赖未就绪、脚本不可执行，最终把一次可控波动拖成二次事故。我现在的硬性要求是：回滚脚本必须在演练中走通，且值班同学能在分钟级执行，不依赖“只有某个人会”。</p>
+<h3 id="案例-5语义正确性被性能优化破坏">案例 5：语义正确性被性能优化破坏</h3>
+<p>冷启动慢影响 SLA 这类问题常见于“先提速后校验”。如果幂等、顺序、一致性边界没写清楚，任何异步化、批处理化、并行化改造都可能把业务语义悄悄改坏。高阶技术真正的难点不在 API，而在“提速同时不破坏语义”。因此我倾向于先写语义契约测试，再推进性能改造。</p>
+<h2 id="落地行动手册可给团队直接执行">落地行动手册（可给团队直接执行）</h2>
+<h3 id="第一步建立统一语言">第一步：建立统一语言</h3>
+<p>先让研发、测试、运维对关键术语达成一致：什么叫成功、什么叫降级、什么叫可接受失败、什么叫必须回滚。没有统一语言，跨团队协作会大量内耗。</p>
+<h3 id="第二步建立统一预算">第二步：建立统一预算</h3>
+<p>给超时、重试、队列、并发都设预算，并明确总预算不允许跨层累加。很多线上雪崩不是因为某一层太激进，而是“每层都稍微激进，叠加后失控”。预算统一后，风险可预测性会显著提升。</p>
+<h3 id="第三步建立统一观测">第三步：建立统一观测</h3>
+<p>至少建设四块看板：体验看板、资源看板、依赖看板、恢复看板。恢复看板尤其重要，它能告诉你“系统恢复速度是否在变慢”，这是稳定性退化的早期信号。</p>
+<h3 id="第四步建立统一演练">第四步：建立统一演练</h3>
+<p>每月至少演练一次：流量突刺、下游超时、依赖失败、配置回滚。演练目标不是“证明系统完美”，而是“证明团队在不完美场景下仍可快速恢复”。</p>
+<h3 id="第五步建立统一文档">第五步：建立统一文档</h3>
+<p>把策略、阈值、脚本、联系人、升级路径写成版本化文档。文档不是形式主义，它是把个人经验转成团队能力的唯一低成本方式。</p>
+<h3 id="第六步建立统一复盘">第六步：建立统一复盘</h3>
+<p>每次故障或险情都要回答三类问题：</p>
+<ul>
+<li>技术层：根因是什么，为什么之前没发现。</li>
+<li>流程层：哪一步响应慢了，为什么慢。</li>
+<li>组织层：知识是否只掌握在少数人手里。</li>
+</ul>
+<p>只有三层都复盘，系统才会真正进化。</p>
+<h2 id="结尾从会用技术到会做系统">结尾：从“会用技术”到“会做系统”</h2>
+<p>如果只看单点技术，AOT 约束、反射配置、镜像优化 也许只是几段代码、几个参数、几个命令。但放到真实生产环境，它其实是“工程纪律 + 观测体系 + 协作流程”的综合能力。2024 年我最深的体会是：真正拉开差距的不是谁懂得更多术语，而是谁能把复杂问题稳定地变成团队可执行的标准动作。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2024-12-07</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/44/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://qq2514568380.github.io/44/" data-title="GraalVM Native Image 上线清单：启动速度与可观测性平衡" data-hashtags="Java,GraalVM,云原生"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://qq2514568380.github.io/44/" data-hashtag="Java"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://qq2514568380.github.io/44/" data-title="GraalVM Native Image 上线清单：启动速度与可观测性平衡"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://qq2514568380.github.io/44/" data-title="GraalVM Native Image 上线清单：启动速度与可观测性平衡"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://qq2514568380.github.io/44/" data-title="GraalVM Native Image 上线清单：启动速度与可观测性平衡" data-image="/images/lighthouse.jpg"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/java/">Java</a>,&nbsp;<a href="/tags/graalvm/">GraalVM</a>,&nbsp;<a href="/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/">云原生</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/43/" class="prev" rel="prev" title="DDD &#43; 六边形架构在 Java 落地：从 CRUD 到领域模型"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>DDD + 六边形架构在 Java 落地：从 CRUD 到领域模型</a>
+            <a href="/18/" class="next" rel="next" title="netty个人理解">netty个人理解<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.120.4">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2023 - 2026</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">李森</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/aplayer/APlayer.min.css"><link rel="stylesheet" href="/lib/aplayer/dark.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/lib/valine/Valine.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/aplayer/APlayer.min.js"></script><script type="text/javascript" src="/lib/meting/Meting.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{"gitalk":{"admin":[""],"clientID":"","clientSecret":"","id":"2024-12-07T20:09:50+08:00","owner":"","repo":"","title":"GraalVM Native Image 上线清单：启动速度与可观测性平衡"},"valine":{"appId":"","appKey":"","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"en","pageSize":10,"placeholder":"Your comment ...","recordIP":true,"visitor":true}},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

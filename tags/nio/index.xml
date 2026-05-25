@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>NIO - Tag - 森的博客</title>
+        <link>https://qq2514568380.github.io/tags/nio/</link>
+        <description>NIO - Tag - 森的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Thu, 09 May 2024 20:12:35 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/nio/" rel="self" type="application/rss+xml" /><item>
+    <title>NIO 零拷贝与大文件传输：吞吐翻倍的工程细节</title>
+    <link>https://qq2514568380.github.io/33/</link>
+    <pubDate>Thu, 09 May 2024 20:12:35 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/33/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>容量评估稿：吞吐、稳定、成本一起看 容量视角的三件事 吞吐上限在哪里。 稳定运行区间在哪里。 成本拐点在哪里。 这三件事不清楚，任何“性能提升”都可能]]></description>
+</item>
+</channel>
+</rss>

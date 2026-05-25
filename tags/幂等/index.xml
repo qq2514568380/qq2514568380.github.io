@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>幂等 - Tag - 森的博客</title>
+        <link>https://qq2514568380.github.io/tags/%E5%B9%82%E7%AD%89/</link>
+        <description>幂等 - Tag - 森的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Mon, 08 Jul 2024 22:37:03 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/%E5%B9%82%E7%AD%89/" rel="self" type="application/rss+xml" /><item>
+    <title>幂等体系建设：接口、消息、任务三层防重</title>
+    <link>https://qq2514568380.github.io/37/</link>
+    <pubDate>Mon, 08 Jul 2024 22:37:03 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/37/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>分层防线：别把幂等当成单点能力 三层幂等防线 第一层：接口层幂等键，快速拒绝重复请求。 第二层：消息层去重，抵御重复投递。 第三层：存储层唯一约束，]]></description>
+</item>
+</channel>
+</rss>

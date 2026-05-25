@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>GC - Tag - 森的博客</title>
+        <link>https://qq2514568380.github.io/tags/gc/</link>
+        <description>GC - Tag - 森的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Mon, 19 Feb 2024 23:10:09 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/gc/" rel="self" type="application/rss+xml" /><item>
+    <title>G1 GC 调优纪实：从 700ms 停顿到 120ms</title>
+    <link>https://qq2514568380.github.io/28/</link>
+    <pubDate>Mon, 19 Feb 2024 23:10:09 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/28/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>参数实验账本：每一轮都要可追溯 当时我们约定：所有 GC 调参必须带基线与回归截图。 实验台账（节选） 轮次 改动项 预期 实际 结论 1 调整超时预算 降低阻塞 部分]]></description>
+</item>
+</channel>
+</rss>

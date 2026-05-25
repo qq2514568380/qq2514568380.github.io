@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>字节码 - Tag - 森的博客</title>
+        <link>https://qq2514568380.github.io/tags/%E5%AD%97%E8%8A%82%E7%A0%81/</link>
+        <description>字节码 - Tag - 森的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Mon, 01 Apr 2024 11:21:26 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/%E5%AD%97%E8%8A%82%E7%A0%81/" rel="self" type="application/rss+xml" /><item>
+    <title>字节码增强入门：ASM与Java Agent</title>
+    <link>https://qq2514568380.github.io/32/</link>
+    <pubDate>Mon, 01 Apr 2024 11:21:26 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/32/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>主题简介 字节码增强可用于监控、审计与无侵入治理，但要控制兼容性风险。 核心要点 ClassFileTransformer 的注册与生效时机 ASM 访问者模式改写方法体 线上动态 attach 与权限约束 示例]]></description>
+</item>
+</channel>
+</rss>

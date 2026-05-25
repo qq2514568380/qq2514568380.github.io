@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>事务 - Tag - 森的博客</title>
+        <link>https://qq2514568380.github.io/tags/%E4%BA%8B%E5%8A%A1/</link>
+        <description>事务 - Tag - 森的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Tue, 11 Jun 2024 23:22:40 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/%E4%BA%8B%E5%8A%A1/" rel="self" type="application/rss+xml" /><item>
+    <title>Spring 事务深水区：传播行为、隔离级别与回滚语义</title>
+    <link>https://qq2514568380.github.io/35/</link>
+    <pubDate>Tue, 11 Jun 2024 23:22:40 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/35/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>半年回看：哪些设计值，哪些不值 事务这件事，别只看注解 在 结算中心 中，问题常常不是“有没有事务”，而是事务边界和业务边界错位。只要边界错位，回滚]]></description>
+</item>
+</channel>
+</rss>

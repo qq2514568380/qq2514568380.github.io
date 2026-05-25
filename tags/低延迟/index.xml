@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>低延迟 - Tag - 森的博客</title>
+        <link>https://qq2514568380.github.io/tags/%E4%BD%8E%E5%BB%B6%E8%BF%9F/</link>
+        <description>低延迟 - Tag - 森的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Tue, 05 Mar 2024 21:51:40 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/%E4%BD%8E%E5%BB%B6%E8%BF%9F/" rel="self" type="application/rss+xml" /><item>
+    <title>ZGC 低延迟实践：把尾延迟从“玄学”变成可观测</title>
+    <link>https://qq2514568380.github.io/29/</link>
+    <pubDate>Tue, 05 Mar 2024 21:51:40 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/29/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>延迟剖面图：从尾延迟反推瓶颈 这篇写于一次大促演练后，重点是“留足余量”。 延迟剖面法 我把延迟拆成四段：入口排队、业务执行、下游等待、返回序列化]]></description>
+</item>
+</channel>
+</rss>

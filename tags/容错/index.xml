@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>容错 - Tag - 森的博客</title>
+        <link>https://qq2514568380.github.io/tags/%E5%AE%B9%E9%94%99/</link>
+        <description>容错 - Tag - 森的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Sat, 03 Aug 2024 21:53:12 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/%E5%AE%B9%E9%94%99/" rel="self" type="application/rss+xml" /><item>
+    <title>Resilience4j 全家桶实战：限流、熔断、舱壁协同</title>
+    <link>https://qq2514568380.github.io/38/</link>
+    <pubDate>Sat, 03 Aug 2024 21:53:12 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/38/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>活动前演练：把风险暴露在上线前 先回答最常见的误解 误解 1：限流会影响转化，所以尽量别开。 误解 2：熔断开启就是系统失败。 误解 3：舱壁隔离只是“多]]></description>
+</item>
+</channel>
+</rss>

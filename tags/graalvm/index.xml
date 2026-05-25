@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>GraalVM - Tag - 森的博客</title>
+        <link>https://qq2514568380.github.io/tags/graalvm/</link>
+        <description>GraalVM - Tag - 森的博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>2514568380@qq.com (李森)</managingEditor>
+            <webMaster>2514568380@qq.com (李森)</webMaster><lastBuildDate>Sat, 07 Dec 2024 20:09:50 &#43;0800</lastBuildDate><atom:link href="https://qq2514568380.github.io/tags/graalvm/" rel="self" type="application/rss+xml" /><item>
+    <title>GraalVM Native Image 上线清单：启动速度与可观测性平衡</title>
+    <link>https://qq2514568380.github.io/44/</link>
+    <pubDate>Sat, 07 Dec 2024 20:09:50 &#43;0800</pubDate>
+    <author>李森</author>
+    <guid>https://qq2514568380.github.io/44/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>年终收官：把经验固定为流程 年末总结视角 这一篇关注的是“上线后还能不能稳定维护”。很多优化在发布当天看起来很好，但如果缺少可观测和应急手段，后]]></description>
+</item>
+</channel>
+</rss>
